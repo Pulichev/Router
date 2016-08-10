@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://selena/Router/RouterWCF.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Data" />
+  <xs:element name="UserName">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UserNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserNameResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SuperDetailsElement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="superId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SuperDetailsElementResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Data" minOccurs="0" name="SuperDetailsElementResult" nillable="true" type="q1:SuperDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ManagerList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="superId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ManagerListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Data" minOccurs="0" name="ManagerListResult" nillable="true" type="q2:ArrayOfManager" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PlaceList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PlaceListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Data" minOccurs="0" name="PlaceListResult" nillable="true" type="q3:ArrayOfPlace" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkTypeList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="WorkTypeListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Data" minOccurs="0" name="WorkTypeListResult" nillable="true" type="q4:ArrayOfWorkType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StateList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StateListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Data" minOccurs="0" name="StateListResult" nillable="true" type="q5:ArrayOfState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AgreeTypeList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AgreeTypeListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Data" minOccurs="0" name="AgreeTypeListResult" nillable="true" type="q6:ArrayOfAgreement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SuperList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="place" type="xs:int" />
+        <xs:element minOccurs="0" name="placeType" type="xs:int" />
+        <xs:element minOccurs="0" name="workType" type="xs:int" />
+        <xs:element minOccurs="0" name="state" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SuperListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Data" minOccurs="0" name="SuperListResult" nillable="true" type="q7:ArrayOfSuper" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ManagerAdd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Data" minOccurs="0" name="manager" nillable="true" type="q8:Manager" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ManagerAddResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SuperDetailsAdd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Data" minOccurs="0" name="s" nillable="true" type="q9:SuperDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SuperDetailsAddResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ManagerDelete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="managerId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ManagerDeleteResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SuperDelete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="superId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SuperDeleteResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ManagerUpdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Data" minOccurs="0" name="manager" nillable="true" type="q10:Manager" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ManagerUpdateResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SuperUpdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Data" minOccurs="0" name="super" nillable="true" type="q11:SuperDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SuperUpdateResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

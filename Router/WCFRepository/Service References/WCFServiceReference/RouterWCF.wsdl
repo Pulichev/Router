@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="RouterWCF" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_IRouterWCF_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <http:NegotiateAuthentication xmlns:http="http://schemas.microsoft.com/ws/06/2004/policy/http" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="https://selena/Router/RouterWCF.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="https://selena/Router/RouterWCF.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://selena/Router/RouterWCF.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IRouterWCF_UserName_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserName" />
+  </wsdl:message>
+  <wsdl:message name="IRouterWCF_UserName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRouterWCF_SuperDetailsElement_InputMessage">
+    <wsdl:part name="parameters" element="tns:SuperDetailsElement" />
+  </wsdl:message>
+  <wsdl:message name="IRouterWCF_SuperDetailsElement_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SuperDetailsElementResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRouterWCF_ManagerList_InputMessage">
+    <wsdl:part name="parameters" element="tns:ManagerList" />
+  </wsdl:message>
+  <wsdl:message name="IRouterWCF_ManagerList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ManagerListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRouterWCF_PlaceList_InputMessage">
+    <wsdl:part name="parameters" element="tns:PlaceList" />
+  </wsdl:message>
+  <wsdl:message name="IRouterWCF_PlaceList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PlaceListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRouterWCF_WorkTypeList_InputMessage">
+    <wsdl:part name="parameters" element="tns:WorkTypeList" />
+  </wsdl:message>
+  <wsdl:message name="IRouterWCF_WorkTypeList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WorkTypeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRouterWCF_StateList_InputMessage">
+    <wsdl:part name="parameters" element="tns:StateList" />
+  </wsdl:message>
+  <wsdl:message name="IRouterWCF_StateList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StateListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRouterWCF_AgreeTypeList_InputMessage">
+    <wsdl:part name="parameters" element="tns:AgreeTypeList" />
+  </wsdl:message>
+  <wsdl:message name="IRouterWCF_AgreeTypeList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AgreeTypeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRouterWCF_SuperList_InputMessage">
+    <wsdl:part name="parameters" element="tns:SuperList" />
+  </wsdl:message>
+  <wsdl:message name="IRouterWCF_SuperList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SuperListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRouterWCF_ManagerAdd_InputMessage">
+    <wsdl:part name="parameters" element="tns:ManagerAdd" />
+  </wsdl:message>
+  <wsdl:message name="IRouterWCF_ManagerAdd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ManagerAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRouterWCF_SuperDetailsAdd_InputMessage">
+    <wsdl:part name="parameters" element="tns:SuperDetailsAdd" />
+  </wsdl:message>
+  <wsdl:message name="IRouterWCF_SuperDetailsAdd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SuperDetailsAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRouterWCF_ManagerDelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:ManagerDelete" />
+  </wsdl:message>
+  <wsdl:message name="IRouterWCF_ManagerDelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ManagerDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRouterWCF_SuperDelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:SuperDelete" />
+  </wsdl:message>
+  <wsdl:message name="IRouterWCF_SuperDelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SuperDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRouterWCF_ManagerUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:ManagerUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IRouterWCF_ManagerUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ManagerUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRouterWCF_SuperUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:SuperUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IRouterWCF_SuperUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SuperUpdateResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IRouterWCF">
+    <wsdl:operation name="UserName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRouterWCF/UserName" message="tns:IRouterWCF_UserName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRouterWCF/UserNameResponse" message="tns:IRouterWCF_UserName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SuperDetailsElement">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRouterWCF/SuperDetailsElement" message="tns:IRouterWCF_SuperDetailsElement_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRouterWCF/SuperDetailsElementResponse" message="tns:IRouterWCF_SuperDetailsElement_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ManagerList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRouterWCF/ManagerList" message="tns:IRouterWCF_ManagerList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRouterWCF/ManagerListResponse" message="tns:IRouterWCF_ManagerList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PlaceList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRouterWCF/PlaceList" message="tns:IRouterWCF_PlaceList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRouterWCF/PlaceListResponse" message="tns:IRouterWCF_PlaceList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WorkTypeList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRouterWCF/WorkTypeList" message="tns:IRouterWCF_WorkTypeList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRouterWCF/WorkTypeListResponse" message="tns:IRouterWCF_WorkTypeList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StateList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRouterWCF/StateList" message="tns:IRouterWCF_StateList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRouterWCF/StateListResponse" message="tns:IRouterWCF_StateList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgreeTypeList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRouterWCF/AgreeTypeList" message="tns:IRouterWCF_AgreeTypeList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRouterWCF/AgreeTypeListResponse" message="tns:IRouterWCF_AgreeTypeList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SuperList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRouterWCF/SuperList" message="tns:IRouterWCF_SuperList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRouterWCF/SuperListResponse" message="tns:IRouterWCF_SuperList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ManagerAdd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRouterWCF/ManagerAdd" message="tns:IRouterWCF_ManagerAdd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRouterWCF/ManagerAddResponse" message="tns:IRouterWCF_ManagerAdd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SuperDetailsAdd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRouterWCF/SuperDetailsAdd" message="tns:IRouterWCF_SuperDetailsAdd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRouterWCF/SuperDetailsAddResponse" message="tns:IRouterWCF_SuperDetailsAdd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ManagerDelete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRouterWCF/ManagerDelete" message="tns:IRouterWCF_ManagerDelete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRouterWCF/ManagerDeleteResponse" message="tns:IRouterWCF_ManagerDelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SuperDelete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRouterWCF/SuperDelete" message="tns:IRouterWCF_SuperDelete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRouterWCF/SuperDeleteResponse" message="tns:IRouterWCF_SuperDelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ManagerUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRouterWCF/ManagerUpdate" message="tns:IRouterWCF_ManagerUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRouterWCF/ManagerUpdateResponse" message="tns:IRouterWCF_ManagerUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SuperUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRouterWCF/SuperUpdate" message="tns:IRouterWCF_SuperUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRouterWCF/SuperUpdateResponse" message="tns:IRouterWCF_SuperUpdate_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_IRouterWCF" type="tns:IRouterWCF">
+    <wsp:PolicyReference URI="#WSHttpBinding_IRouterWCF_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UserName">
+      <soap12:operation soapAction="http://tempuri.org/IRouterWCF/UserName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuperDetailsElement">
+      <soap12:operation soapAction="http://tempuri.org/IRouterWCF/SuperDetailsElement" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ManagerList">
+      <soap12:operation soapAction="http://tempuri.org/IRouterWCF/ManagerList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PlaceList">
+      <soap12:operation soapAction="http://tempuri.org/IRouterWCF/PlaceList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WorkTypeList">
+      <soap12:operation soapAction="http://tempuri.org/IRouterWCF/WorkTypeList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StateList">
+      <soap12:operation soapAction="http://tempuri.org/IRouterWCF/StateList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgreeTypeList">
+      <soap12:operation soapAction="http://tempuri.org/IRouterWCF/AgreeTypeList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuperList">
+      <soap12:operation soapAction="http://tempuri.org/IRouterWCF/SuperList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ManagerAdd">
+      <soap12:operation soapAction="http://tempuri.org/IRouterWCF/ManagerAdd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuperDetailsAdd">
+      <soap12:operation soapAction="http://tempuri.org/IRouterWCF/SuperDetailsAdd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ManagerDelete">
+      <soap12:operation soapAction="http://tempuri.org/IRouterWCF/ManagerDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuperDelete">
+      <soap12:operation soapAction="http://tempuri.org/IRouterWCF/SuperDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ManagerUpdate">
+      <soap12:operation soapAction="http://tempuri.org/IRouterWCF/ManagerUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuperUpdate">
+      <soap12:operation soapAction="http://tempuri.org/IRouterWCF/SuperUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RouterWCF">
+    <wsdl:port name="WSHttpBinding_IRouterWCF" binding="tns:WSHttpBinding_IRouterWCF">
+      <soap12:address location="https://selena/Router/RouterWCF.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>https://selena/Router/RouterWCF.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Spn>host/selena.field.tns</Spn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

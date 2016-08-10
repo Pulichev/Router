@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище RealRepositoryContainer" CdmEntityContainer="MICRouterEntities">
+    <EntitySetMapping Name="super_managers">
+      <EntityTypeMapping TypeName="RealRepository.super_managers">
+        <MappingFragment StoreEntitySet="super_managers">
+          <ScalarProperty Name="super_manager_id" ColumnName="super_manager_id" />
+          <ScalarProperty Name="supervisor_id" ColumnName="supervisor_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="desc" ColumnName="desc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="super_place_types">
+      <EntityTypeMapping TypeName="RealRepository.super_place_types">
+        <MappingFragment StoreEntitySet="super_place_types">
+          <ScalarProperty Name="super_place_type_id" ColumnName="super_place_type_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="super_places">
+      <EntityTypeMapping TypeName="RealRepository.super_places">
+        <MappingFragment StoreEntitySet="super_places">
+          <ScalarProperty Name="super_place_id" ColumnName="super_place_id" />
+          <ScalarProperty Name="supervisor_id" ColumnName="supervisor_id" />
+          <ScalarProperty Name="territory_id" ColumnName="territory_id" />
+          <ScalarProperty Name="super_territory_type_id" ColumnName="super_territory_type_id" />
+          <ScalarProperty Name="super_place_type_id" ColumnName="super_place_type_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="super_properties">
+      <EntityTypeMapping TypeName="RealRepository.super_properties">
+        <MappingFragment StoreEntitySet="super_properties">
+          <ScalarProperty Name="super_property_id" ColumnName="super_property_id" />
+          <ScalarProperty Name="supervisor_id" ColumnName="supervisor_id" />
+          <ScalarProperty Name="super_state_id" ColumnName="super_state_id" />
+          <ScalarProperty Name="manager_id" ColumnName="manager_id" />
+          <ScalarProperty Name="change_date" ColumnName="change_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="super_states">
+      <EntityTypeMapping TypeName="RealRepository.super_states">
+        <MappingFragment StoreEntitySet="super_states">
+          <ScalarProperty Name="super_state_id" ColumnName="super_state_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="super_territory_types">
+      <EntityTypeMapping TypeName="RealRepository.super_territory_types">
+        <MappingFragment StoreEntitySet="super_territory_types">
+          <ScalarProperty Name="super_territory_type_id" ColumnName="super_territory_type_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="super_work_types">
+      <EntityTypeMapping TypeName="RealRepository.super_work_types">
+        <MappingFragment StoreEntitySet="super_work_types">
+          <ScalarProperty Name="super_work_type_id" ColumnName="super_work_type_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="ord" ColumnName="ord" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="super_works">
+      <EntityTypeMapping TypeName="RealRepository.super_works">
+        <MappingFragment StoreEntitySet="super_works">
+          <ScalarProperty Name="super_work_id" ColumnName="super_work_id" />
+          <ScalarProperty Name="supervisor_id" ColumnName="supervisor_id" />
+          <ScalarProperty Name="super_work_type_id" ColumnName="super_work_type_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="supervisors">
+      <EntityTypeMapping TypeName="RealRepository.supervisors">
+        <MappingFragment StoreEntitySet="supervisors">
+          <ScalarProperty Name="supervisor_id" ColumnName="supervisor_id" />
+          <ScalarProperty Name="name_fact" ColumnName="name_fact" />
+          <ScalarProperty Name="name_law" ColumnName="name_law" />
+          <ScalarProperty Name="head_name" ColumnName="head_name" />
+          <ScalarProperty Name="head_comment" ColumnName="head_comment" />
+          <ScalarProperty Name="head_phone_work" ColumnName="head_phone_work" />
+          <ScalarProperty Name="head_phone_home" ColumnName="head_phone_home" />
+          <ScalarProperty Name="head_phone_mobile" ColumnName="head_phone_mobile" />
+          <ScalarProperty Name="fax" ColumnName="fax" />
+          <ScalarProperty Name="http" ColumnName="http" />
+          <ScalarProperty Name="head_email" ColumnName="head_email" />
+          <ScalarProperty Name="field_name" ColumnName="field_name" />
+          <ScalarProperty Name="field_comment" ColumnName="field_comment" />
+          <ScalarProperty Name="field_phone_work" ColumnName="field_phone_work" />
+          <ScalarProperty Name="field_phone_home" ColumnName="field_phone_home" />
+          <ScalarProperty Name="field_phone_mobile" ColumnName="field_phone_mobile" />
+          <ScalarProperty Name="field_email" ColumnName="field_email" />
+          <ScalarProperty Name="inter_count" ColumnName="inter_count" />
+          <ScalarProperty Name="address_fact" ColumnName="address_fact" />
+          <ScalarProperty Name="address_law" ColumnName="address_law" />
+          <ScalarProperty Name="computer_count" ColumnName="computer_count" />
+          <ScalarProperty Name="manager_count" ColumnName="manager_count" />
+          <ScalarProperty Name="INN" ColumnName="INN" />
+          <ScalarProperty Name="KPP" ColumnName="KPP" />
+          <ScalarProperty Name="VAT" ColumnName="VAT" />
+          <ScalarProperty Name="VAT_argument" ColumnName="VAT_argument" />
+          <ScalarProperty Name="recvisits" ColumnName="recvisits" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="fin_head" ColumnName="fin_head" />
+          <ScalarProperty Name="fin_position" ColumnName="fin_position" />
+          <ScalarProperty Name="work_on" ColumnName="work_on" />
+          <ScalarProperty Name="ind_licence" ColumnName="ind_licence" />
+          <ScalarProperty Name="ind_tax" ColumnName="ind_tax" />
+          <ScalarProperty Name="ind_inn" ColumnName="ind_inn" />
+          <ScalarProperty Name="ind_register" ColumnName="ind_register" />
+          <ScalarProperty Name="desc_control" ColumnName="desc_control" />
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="folder" ColumnName="folder" />
+          <ScalarProperty Name="dictaphone" ColumnName="dictaphone" />
+          <ScalarProperty Name="notebook" ColumnName="notebook" />
+          <ScalarProperty Name="computer" ColumnName="computer" />
+          <ScalarProperty Name="pda" ColumnName="pda" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="super_manager_v">
+      <EntityTypeMapping TypeName="RealRepository.super_manager_v">
+        <MappingFragment StoreEntitySet="super_manager_v">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="supervisor_id" ColumnName="supervisor_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="desc" ColumnName="desc" />
+          <ScalarProperty Name="canstate" ColumnName="canstate" />
+          <ScalarProperty Name="edit" ColumnName="edit" />
+          <ScalarProperty Name="del" ColumnName="del" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="super_state_list_v">
+      <EntityTypeMapping TypeName="RealRepository.super_state_list_v">
+        <MappingFragment StoreEntitySet="super_state_list_v">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="super_territories_show_v">
+      <EntityTypeMapping TypeName="RealRepository.super_territories_show_v">
+        <MappingFragment StoreEntitySet="super_territories_show_v">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="super_place_name" ColumnName="super_place_name" />
+          <ScalarProperty Name="supervisor_id" ColumnName="supervisor_id" />
+          <ScalarProperty Name="super_territory_type" ColumnName="super_territory_type" />
+          <ScalarProperty Name="name_fact" ColumnName="name_fact" />
+          <ScalarProperty Name="head_name" ColumnName="head_name" />
+          <ScalarProperty Name="head_phone_work" ColumnName="head_phone_work" />
+          <ScalarProperty Name="head_email" ColumnName="head_email" />
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="edit" ColumnName="edit" />
+          <ScalarProperty Name="del" ColumnName="del" />
+          <ScalarProperty Name="canstate" ColumnName="canstate" />
+          <ScalarProperty Name="super_territory_type_id" ColumnName="super_territory_type_id" />
+          <ScalarProperty Name="terr_list_id" ColumnName="terr_list_id" />
+          <ScalarProperty Name="state_id" ColumnName="state_id" />
+          <ScalarProperty Name="super_work_type_id" ColumnName="super_work_type_id" />
+          <ScalarProperty Name="computer" ColumnName="computer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="super_territories_v">
+      <EntityTypeMapping TypeName="RealRepository.super_territories_v">
+        <MappingFragment StoreEntitySet="super_territories_v">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="terr_list_id" ColumnName="terr_list_id" />
+          <ScalarProperty Name="supervisor_id" ColumnName="supervisor_id" />
+          <ScalarProperty Name="super_territory_type_id" ColumnName="super_territory_type_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="super_territory_list_v">
+      <EntityTypeMapping TypeName="RealRepository.super_territory_list_v">
+        <MappingFragment StoreEntitySet="super_territory_list_v">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="super_v">
+      <EntityTypeMapping TypeName="RealRepository.super_v">
+        <MappingFragment StoreEntitySet="super_v">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name_fact" ColumnName="name_fact" />
+          <ScalarProperty Name="name_law" ColumnName="name_law" />
+          <ScalarProperty Name="head_name" ColumnName="head_name" />
+          <ScalarProperty Name="head_comment" ColumnName="head_comment" />
+          <ScalarProperty Name="head_phone_work" ColumnName="head_phone_work" />
+          <ScalarProperty Name="head_phone_home" ColumnName="head_phone_home" />
+          <ScalarProperty Name="head_phone_mobile" ColumnName="head_phone_mobile" />
+          <ScalarProperty Name="fax" ColumnName="fax" />
+          <ScalarProperty Name="http" ColumnName="http" />
+          <ScalarProperty Name="head_email" ColumnName="head_email" />
+          <ScalarProperty Name="field_name" ColumnName="field_name" />
+          <ScalarProperty Name="field_comment" ColumnName="field_comment" />
+          <ScalarProperty Name="field_phone_work" ColumnName="field_phone_work" />
+          <ScalarProperty Name="field_phone_home" ColumnName="field_phone_home" />
+          <ScalarProperty Name="field_phone_mobile" ColumnName="field_phone_mobile" />
+          <ScalarProperty Name="field_email" ColumnName="field_email" />
+          <ScalarProperty Name="inter_count" ColumnName="inter_count" />
+          <ScalarProperty Name="address_fact" ColumnName="address_fact" />
+          <ScalarProperty Name="address_law" ColumnName="address_law" />
+          <ScalarProperty Name="computer_count" ColumnName="computer_count" />
+          <ScalarProperty Name="manager_count" ColumnName="manager_count" />
+          <ScalarProperty Name="INN" ColumnName="INN" />
+          <ScalarProperty Name="KPP" ColumnName="KPP" />
+          <ScalarProperty Name="VAT" ColumnName="VAT" />
+          <ScalarProperty Name="VAT_argument" ColumnName="VAT_argument" />
+          <ScalarProperty Name="recvisits" ColumnName="recvisits" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="fin_head" ColumnName="fin_head" />
+          <ScalarProperty Name="fin_position" ColumnName="fin_position" />
+          <ScalarProperty Name="work_on" ColumnName="work_on" />
+          <ScalarProperty Name="ind_licence" ColumnName="ind_licence" />
+          <ScalarProperty Name="ind_tax" ColumnName="ind_tax" />
+          <ScalarProperty Name="ind_inn" ColumnName="ind_inn" />
+          <ScalarProperty Name="ind_register" ColumnName="ind_register" />
+          <ScalarProperty Name="desc_control" ColumnName="desc_control" />
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="folder" ColumnName="folder" />
+          <ScalarProperty Name="dictaphone" ColumnName="dictaphone" />
+          <ScalarProperty Name="notebook" ColumnName="notebook" />
+          <ScalarProperty Name="computer" ColumnName="computer" />
+          <ScalarProperty Name="pda" ColumnName="pda" />
+          <ScalarProperty Name="state_id" ColumnName="state_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="super_work_type_list_v">
+      <EntityTypeMapping TypeName="RealRepository.super_work_type_list_v">
+        <MappingFragment StoreEntitySet="super_work_type_list_v">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="ord" ColumnName="ord" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionName="Хранилище RealRepository.super_current_states" FunctionImportName="super_current_states">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RealRepository.super_current_states_Result">
+          <ScalarProperty Name="super_id" ColumnName="super_id" />
+          <ScalarProperty Name="state_id" ColumnName="state_id" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="super_manager_delete" FunctionName="Хранилище RealRepository.super_manager_delete" />
+    <FunctionImportMapping FunctionImportName="super_manager_update" FunctionName="Хранилище RealRepository.super_manager_update" />
+    <FunctionImportMapping FunctionImportName="super_territories_show" FunctionName="Хранилище RealRepository.super_territories_show">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RealRepository.super_territories_show_Result">
+          <ScalarProperty Name="supervisor_id" ColumnName="supervisor_id" />
+          <ScalarProperty Name="super_place_name" ColumnName="super_place_name" />
+          <ScalarProperty Name="super_terr_list_id" ColumnName="super_terr_list_id" />
+          <ScalarProperty Name="super_territory_type" ColumnName="super_territory_type" />
+          <ScalarProperty Name="name_fact" ColumnName="name_fact" />
+          <ScalarProperty Name="head_name" ColumnName="head_name" />
+          <ScalarProperty Name="head_phone_work" ColumnName="head_phone_work" />
+          <ScalarProperty Name="head_email" ColumnName="head_email" />
+          <ScalarProperty Name="computer" ColumnName="computer" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="edit" ColumnName="edit" />
+          <ScalarProperty Name="del" ColumnName="del" />
+          <ScalarProperty Name="canstate" ColumnName="canstate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="supervisor_add" FunctionName="Хранилище RealRepository.supervisor_add" />
+    <FunctionImportMapping FunctionImportName="supervisor_agreement_add" FunctionName="Хранилище RealRepository.supervisor_agreement_add" />
+    <FunctionImportMapping FunctionImportName="supervisor_agreement_del" FunctionName="Хранилище RealRepository.supervisor_agreement_del" />
+    <FunctionImportMapping FunctionImportName="supervisor_delete" FunctionName="Хранилище RealRepository.supervisor_delete" />
+    <FunctionImportMapping FunctionImportName="supervisor_event_add" FunctionName="Хранилище RealRepository.supervisor_event_add" />
+    <FunctionImportMapping FunctionImportName="supervisor_event_delete" FunctionName="Хранилище RealRepository.supervisor_event_delete" />
+    <FunctionImportMapping FunctionImportName="supervisor_event_update" FunctionName="Хранилище RealRepository.supervisor_event_update" />
+    <FunctionImportMapping FunctionImportName="supervisor_place_add" FunctionName="Хранилище RealRepository.supervisor_place_add" />
+    <FunctionImportMapping FunctionImportName="supervisor_place_delete" FunctionName="Хранилище RealRepository.supervisor_place_delete" />
+    <FunctionImportMapping FunctionImportName="supervisor_place_update" FunctionName="Хранилище RealRepository.supervisor_place_update" />
+    <FunctionImportMapping FunctionImportName="supervisor_setstate" FunctionName="Хранилище RealRepository.supervisor_setstate" />
+    <FunctionImportMapping FunctionImportName="supervisor_update" FunctionName="Хранилище RealRepository.supervisor_update" />
+    <FunctionImportMapping FunctionImportName="supervisor_work_add" FunctionName="Хранилище RealRepository.supervisor_work_add" />
+    <FunctionImportMapping FunctionImportName="supervisor_work_del" FunctionName="Хранилище RealRepository.supervisor_work_del" />
+    <FunctionImportMapping FunctionImportName="supervisor_work_update" FunctionName="Хранилище RealRepository.supervisor_work_update" />
+    <EntitySetMapping Name="place_list">
+      <EntityTypeMapping TypeName="RealRepository.place_list">
+        <MappingFragment StoreEntitySet="place_list">
+          <ScalarProperty Name="region_name" ColumnName="region_name" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="place_id" ColumnName="place_id" />
+          <ScalarProperty Name="place_type" ColumnName="place_type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="router_super_list" FunctionName="Хранилище RealRepository.router_super_list">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RealRepository.router_super_list_Result">
+          <ScalarProperty Name="supervisor_id" ColumnName="supervisor_id" />
+          <ScalarProperty Name="place_type" ColumnName="place_type" />
+          <ScalarProperty Name="place" ColumnName="place" />
+          <ScalarProperty Name="region" ColumnName="region" />
+          <ScalarProperty Name="super_state" ColumnName="super_state" />
+          <ScalarProperty Name="territory_type" ColumnName="territory_type" />
+          <ScalarProperty Name="name_fact" ColumnName="name_fact" />
+          <ScalarProperty Name="head_name" ColumnName="head_name" />
+          <ScalarProperty Name="head_phone_work" ColumnName="head_phone_work" />
+          <ScalarProperty Name="head_email" ColumnName="head_email" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="router_manager_add" FunctionName="Хранилище RealRepository.router_manager_add" />
+    <FunctionImportMapping FunctionImportName="router_manager_delete" FunctionName="Хранилище RealRepository.router_manager_delete" />
+    <FunctionImportMapping FunctionImportName="router_manager_update" FunctionName="Хранилище RealRepository.router_manager_update" />
+    <FunctionImportMapping FunctionImportName="router_supervisor_delete" FunctionName="Хранилище RealRepository.router_supervisor_delete" />
+    <FunctionImportMapping FunctionImportName="router_supervisor_place_delete" FunctionName="Хранилище RealRepository.router_supervisor_place_delete" />
+    <FunctionImportMapping FunctionImportName="router_supervisor_add" FunctionName="Хранилище RealRepository.router_supervisor_add" />
+    <FunctionImportMapping FunctionImportName="router_supervisor_place_add" FunctionName="Хранилище RealRepository.router_supervisor_place_add" />
+    <FunctionImportMapping FunctionImportName="router_supervisor_work_add" FunctionName="Хранилище RealRepository.router_supervisor_work_add" />
+    <FunctionImportMapping FunctionImportName="router_supervisor_work_del" FunctionName="Хранилище RealRepository.router_supervisor_work_del" />
+    <FunctionImportMapping FunctionImportName="router_supervisor_place_update" FunctionName="Хранилище RealRepository.router_supervisor_place_update" />
+    <FunctionImportMapping FunctionImportName="router_supervisor_update" FunctionName="Хранилище RealRepository.router_supervisor_update" />
+  </EntityContainerMapping>
+</Mapping>

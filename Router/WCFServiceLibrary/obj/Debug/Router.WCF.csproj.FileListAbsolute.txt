@@ -1,0 +1,55 @@
+D:\Projects\TeamWork\MICField\Router\WCFServiceLibrary\bin\Debug\Data.dll
+D:\Projects\TeamWork\MICField\Router\WCFServiceLibrary\bin\Debug\DBProvider.dll
+D:\Projects\TeamWork\MICField\Router\WCFServiceLibrary\bin\Debug\EntityFramework.dll
+D:\Projects\TeamWork\MICField\Router\WCFServiceLibrary\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\TeamWork\MICField\Router\WCFServiceLibrary\bin\Debug\RealRepository.dll
+D:\Projects\TeamWork\MICField\Router\WCFServiceLibrary\bin\Debug\Data.pdb
+D:\Projects\TeamWork\MICField\Router\WCFServiceLibrary\bin\Debug\DBProvider.pdb
+D:\Projects\TeamWork\MICField\Router\WCFServiceLibrary\bin\Debug\EntityFramework.xml
+D:\Projects\TeamWork\MICField\Router\WCFServiceLibrary\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\TeamWork\MICField\Router\WCFServiceLibrary\bin\Debug\RealRepository.pdb
+D:\Projects\TeamWork\MICField\Router\WCFServiceLibrary\bin\Debug\ru\EntityFramework.resources.dll
+D:\Projects\TeamWork\MICField\Router\WCFServiceLibrary\obj\Debug\Router.WCF.csprojResolveAssemblyReference.cache
+D:\Projects\TeamWork\MICField\Router\WCFServiceLibrary\bin\Debug\Router.WCF.dll.config
+D:\Projects\TeamWork\MICField\Router\WCFServiceLibrary\bin\Debug\Router.WCF.dll
+D:\Projects\TeamWork\MICField\Router\WCFServiceLibrary\bin\Debug\Router.WCF.pdb
+D:\Projects\TeamWork\MICField\Router\WCFServiceLibrary\obj\Debug\Router.WCF.dll
+D:\Projects\TeamWork\MICField\Router\WCFServiceLibrary\obj\Debug\Router.WCF.pdb
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\WCFServiceLibrary\bin\Debug\Router.WCF.dll.config
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\WCFServiceLibrary\bin\Debug\Router.WCF.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\WCFServiceLibrary\bin\Debug\Router.WCF.pdb
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\WCFServiceLibrary\bin\Debug\Data.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\WCFServiceLibrary\bin\Debug\DBProvider.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\WCFServiceLibrary\bin\Debug\EntityFramework.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\WCFServiceLibrary\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\WCFServiceLibrary\bin\Debug\Data.pdb
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\WCFServiceLibrary\bin\Debug\DBProvider.pdb
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\WCFServiceLibrary\bin\Debug\EntityFramework.xml
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\WCFServiceLibrary\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\WCFServiceLibrary\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\WCFServiceLibrary\obj\Debug\Router.WCF.csprojResolveAssemblyReference.cache
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\WCFServiceLibrary\obj\Debug\Router.WCF.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\WCFServiceLibrary\obj\Debug\Router.WCF.pdb
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\WCFServiceLibrary\bin\Debug\RealRepository.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\WCFServiceLibrary\bin\Debug\Core.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\WCFServiceLibrary\bin\Debug\RealRepository.pdb
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\WCFServiceLibrary\bin\Debug\Core.pdb
+C:\Users\Влад\Desktop\Router\WCFServiceLibrary\bin\Debug\Router.WCF.dll.config
+C:\Users\Влад\Desktop\Router\WCFServiceLibrary\bin\Debug\Router.WCF.dll
+C:\Users\Влад\Desktop\Router\WCFServiceLibrary\bin\Debug\Router.WCF.pdb
+C:\Users\Влад\Desktop\Router\WCFServiceLibrary\bin\Debug\Data.dll
+C:\Users\Влад\Desktop\Router\WCFServiceLibrary\bin\Debug\DBProvider.dll
+C:\Users\Влад\Desktop\Router\WCFServiceLibrary\bin\Debug\EntityFramework.dll
+C:\Users\Влад\Desktop\Router\WCFServiceLibrary\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Влад\Desktop\Router\WCFServiceLibrary\bin\Debug\RealRepository.dll
+C:\Users\Влад\Desktop\Router\WCFServiceLibrary\bin\Debug\Core.dll
+C:\Users\Влад\Desktop\Router\WCFServiceLibrary\bin\Debug\Data.pdb
+C:\Users\Влад\Desktop\Router\WCFServiceLibrary\bin\Debug\DBProvider.pdb
+C:\Users\Влад\Desktop\Router\WCFServiceLibrary\bin\Debug\EntityFramework.xml
+C:\Users\Влад\Desktop\Router\WCFServiceLibrary\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Влад\Desktop\Router\WCFServiceLibrary\bin\Debug\RealRepository.pdb
+C:\Users\Влад\Desktop\Router\WCFServiceLibrary\bin\Debug\Core.pdb
+C:\Users\Влад\Desktop\Router\WCFServiceLibrary\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Влад\Desktop\Router\WCFServiceLibrary\obj\Debug\Router.WCF.csprojResolveAssemblyReference.cache
+C:\Users\Влад\Desktop\Router\WCFServiceLibrary\obj\Debug\Router.WCF.dll
+C:\Users\Влад\Desktop\Router\WCFServiceLibrary\obj\Debug\Router.WCF.pdb

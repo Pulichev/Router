@@ -1,0 +1,16 @@
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\Repository\RealRepository\bin\Release\RealRepository.dll.config
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\Repository\RealRepository\bin\Release\RealRepository.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\Repository\RealRepository\bin\Release\RealRepository.pdb
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\Repository\RealRepository\bin\Release\Core.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\Repository\RealRepository\bin\Release\Data.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\Repository\RealRepository\bin\Release\DBProvider.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\Repository\RealRepository\bin\Release\Core.pdb
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\Repository\RealRepository\bin\Release\Data.pdb
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\Repository\RealRepository\bin\Release\DBProvider.pdb
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\Repository\RealRepository\obj\Release\RealRepository.csprojResolveAssemblyReference.cache
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\Repository\RealRepository\obj\Release\RealRepository.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\Repository\RealRepository\obj\Release\RealRepository.pdb
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\Repository\RealRepository\bin\Release\EntityFramework.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\Repository\RealRepository\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\Repository\RealRepository\bin\Release\EntityFramework.xml
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\Repository\RealRepository\bin\Release\EntityFramework.SqlServer.xml

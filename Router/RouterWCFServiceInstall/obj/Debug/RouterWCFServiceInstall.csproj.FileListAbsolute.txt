@@ -1,0 +1,17 @@
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\RouterWCFServiceInstall\bin\Debug\RouterWCFServiceInstall.exe.config
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\RouterWCFServiceInstall\bin\Debug\RouterWCFServiceInstall.exe
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\RouterWCFServiceInstall\bin\Debug\RouterWCFServiceInstall.pdb
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\RouterWCFServiceInstall\bin\Debug\WCFServiceLibrary.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\RouterWCFServiceInstall\bin\Debug\Data.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\RouterWCFServiceInstall\bin\Debug\DBProvider.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\RouterWCFServiceInstall\bin\Debug\EntityFramework.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\RouterWCFServiceInstall\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\RouterWCFServiceInstall\bin\Debug\WCFServiceLibrary.pdb
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\RouterWCFServiceInstall\bin\Debug\Data.pdb
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\RouterWCFServiceInstall\bin\Debug\DBProvider.pdb
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\RouterWCFServiceInstall\bin\Debug\EntityFramework.xml
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\RouterWCFServiceInstall\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\RouterWCFServiceInstall\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\RouterWCFServiceInstall\obj\Debug\RouterWCFServiceInstall.csprojResolveAssemblyReference.cache
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\RouterWCFServiceInstall\obj\Debug\RouterWCFServiceInstall.exe
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\RouterWCFServiceInstall\obj\Debug\RouterWCFServiceInstall.pdb

@@ -1,0 +1,2292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Хранилище RealRepository" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="super_agree_types">
+          <Key>
+            <PropertyRef Name="super_agree_type_id" />
+          </Key>
+          <Property Name="super_agree_type_id" Type="tinyint" Nullable="false" />
+          <Property Name="agree_name" Type="varchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="super_agreements">
+          <Key>
+            <PropertyRef Name="super_agree_id" />
+          </Key>
+          <Property Name="super_agree_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="supervisor_id" Type="int" Nullable="false" />
+          <Property Name="super_agree_type_id" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="super_managers">
+          <Key>
+            <PropertyRef Name="super_manager_id" />
+          </Key>
+          <Property Name="super_manager_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="supervisor_id" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="phone" Type="varchar" MaxLength="60" />
+          <Property Name="email" Type="varchar" MaxLength="50" />
+          <Property Name="desc" Type="varchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="super_place_types">
+          <Key>
+            <PropertyRef Name="super_place_type_id" />
+          </Key>
+          <Property Name="super_place_type_id" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="super_places">
+          <Key>
+            <PropertyRef Name="super_place_id" />
+          </Key>
+          <Property Name="super_place_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="supervisor_id" Type="int" Nullable="false" />
+          <Property Name="territory_id" Type="int" Nullable="false" />
+          <Property Name="super_territory_type_id" Type="tinyint" Nullable="false" />
+          <Property Name="super_place_type_id" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="super_properties">
+          <Key>
+            <PropertyRef Name="super_property_id" />
+          </Key>
+          <Property Name="super_property_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="supervisor_id" Type="int" Nullable="false" />
+          <Property Name="super_state_id" Type="tinyint" Nullable="false" />
+          <Property Name="manager_id" Type="int" Nullable="false" />
+          <Property Name="change_date" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="super_states">
+          <Key>
+            <PropertyRef Name="super_state_id" />
+          </Key>
+          <Property Name="super_state_id" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="super_territory_types">
+          <Key>
+            <PropertyRef Name="super_territory_type_id" />
+          </Key>
+          <Property Name="super_territory_type_id" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="super_work_types">
+          <Key>
+            <PropertyRef Name="super_work_type_id" />
+          </Key>
+          <Property Name="super_work_type_id" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="ord" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="super_works">
+          <Key>
+            <PropertyRef Name="super_work_id" />
+          </Key>
+          <Property Name="super_work_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="supervisor_id" Type="int" Nullable="false" />
+          <Property Name="super_work_type_id" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="supervisors">
+          <Key>
+            <PropertyRef Name="supervisor_id" />
+          </Key>
+          <Property Name="supervisor_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name_fact" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="name_law" Type="varchar" MaxLength="150" />
+          <Property Name="head_name" Type="varchar" MaxLength="150" />
+          <Property Name="head_comment" Type="varchar" MaxLength="150" />
+          <Property Name="head_phone_work" Type="varchar" MaxLength="80" />
+          <Property Name="head_phone_home" Type="varchar" MaxLength="80" />
+          <Property Name="head_phone_mobile" Type="varchar" MaxLength="80" />
+          <Property Name="fax" Type="varchar" MaxLength="40" />
+          <Property Name="http" Type="varchar" MaxLength="50" />
+          <Property Name="head_email" Type="varchar" MaxLength="100" />
+          <Property Name="field_name" Type="varchar" MaxLength="150" />
+          <Property Name="field_comment" Type="varchar" MaxLength="150" />
+          <Property Name="field_phone_work" Type="varchar" MaxLength="80" />
+          <Property Name="field_phone_home" Type="varchar" MaxLength="80" />
+          <Property Name="field_phone_mobile" Type="varchar" MaxLength="80" />
+          <Property Name="field_email" Type="varchar" MaxLength="100" />
+          <Property Name="inter_count" Type="smallint" />
+          <Property Name="address_fact" Type="varchar" MaxLength="150" />
+          <Property Name="address_law" Type="varchar" MaxLength="150" />
+          <Property Name="computer_count" Type="smallint" />
+          <Property Name="manager_count" Type="smallint" />
+          <Property Name="INN" Type="varchar" MaxLength="50" />
+          <Property Name="KPP" Type="varchar" MaxLength="50" />
+          <Property Name="VAT" Type="bit" />
+          <Property Name="VAT_argument" Type="varchar" MaxLength="1024" />
+          <Property Name="recvisits" Type="varchar" MaxLength="1024" />
+          <Property Name="description" Type="text" />
+          <Property Name="fin_head" Type="varchar" MaxLength="150" />
+          <Property Name="fin_position" Type="varchar" MaxLength="150" />
+          <Property Name="work_on" Type="varchar" MaxLength="80" />
+          <Property Name="ind_licence" Type="varchar" MaxLength="50" />
+          <Property Name="ind_tax" Type="varchar" MaxLength="50" />
+          <Property Name="ind_inn" Type="varchar" MaxLength="50" />
+          <Property Name="ind_register" Type="varchar" MaxLength="50" />
+          <Property Name="desc_control" Type="text" />
+          <Property Name="login" Type="varchar" MaxLength="10" />
+          <Property Name="password" Type="varchar" MaxLength="10" />
+          <Property Name="folder" Type="varchar" MaxLength="30" />
+          <Property Name="dictaphone" Type="int" />
+          <Property Name="notebook" Type="int" />
+          <Property Name="computer" Type="int" />
+          <Property Name="pda" Type="int" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "MICRouter.dbo.super_manager_v" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="super_manager_v">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="supervisor_id" />
+            <PropertyRef Name="name" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="supervisor_id" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="phone" Type="varchar" MaxLength="60" />
+          <Property Name="email" Type="varchar" MaxLength="50" />
+          <Property Name="desc" Type="varchar" MaxLength="250" />
+          <Property Name="canstate" Type="bit" />
+          <Property Name="edit" Type="bit" />
+          <Property Name="del" Type="bit" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "MICRouter.dbo.super_state_list_v" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="super_state_list_v">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="name" />
+          </Key>
+          <Property Name="id" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "MICRouter.dbo.super_territories_show_v" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="super_territories_show_v">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="supervisor_id" />
+            <PropertyRef Name="name_fact" />
+            <PropertyRef Name="super_territory_type_id" />
+            <PropertyRef Name="super_work_type_id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="super_place_name" Type="nvarchar" MaxLength="203" />
+          <Property Name="supervisor_id" Type="int" Nullable="false" />
+          <Property Name="super_territory_type" Type="varchar" MaxLength="30" />
+          <Property Name="name_fact" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="head_name" Type="varchar" MaxLength="150" />
+          <Property Name="head_phone_work" Type="varchar" MaxLength="80" />
+          <Property Name="head_email" Type="varchar" MaxLength="100" />
+          <Property Name="login" Type="varchar" MaxLength="10" />
+          <Property Name="password" Type="varchar" MaxLength="10" />
+          <Property Name="edit" Type="bit" />
+          <Property Name="del" Type="bit" />
+          <Property Name="canstate" Type="bit" />
+          <Property Name="super_territory_type_id" Type="tinyint" Nullable="false" />
+          <Property Name="terr_list_id" Type="varchar" MaxLength="10" />
+          <Property Name="state_id" Type="tinyint" />
+          <Property Name="super_work_type_id" Type="tinyint" Nullable="false" />
+          <Property Name="computer" Type="int" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "MICRouter.dbo.super_territories_v" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="super_territories_v">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="supervisor_id" />
+            <PropertyRef Name="super_territory_type_id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="terr_list_id" Type="varchar" MaxLength="10" />
+          <Property Name="supervisor_id" Type="int" Nullable="false" />
+          <Property Name="super_territory_type_id" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "MICRouter.dbo.super_territory_list_v" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="super_territory_list_v">
+          <Key>
+            <PropertyRef Name="name" />
+          </Key>
+          <Property Name="id" Type="varchar" MaxLength="10" />
+          <Property Name="name" Type="varchar" MaxLength="103" Nullable="false" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "MICRouter.dbo.super_v" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="super_v">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="name_fact" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name_fact" Type="varchar" MaxLength="150" Nullable="false" />
+          <Property Name="name_law" Type="varchar" MaxLength="150" />
+          <Property Name="head_name" Type="varchar" MaxLength="150" />
+          <Property Name="head_comment" Type="varchar" MaxLength="150" />
+          <Property Name="head_phone_work" Type="varchar" MaxLength="80" />
+          <Property Name="head_phone_home" Type="varchar" MaxLength="80" />
+          <Property Name="head_phone_mobile" Type="varchar" MaxLength="80" />
+          <Property Name="fax" Type="varchar" MaxLength="40" />
+          <Property Name="http" Type="varchar" MaxLength="50" />
+          <Property Name="head_email" Type="varchar" MaxLength="100" />
+          <Property Name="field_name" Type="varchar" MaxLength="150" />
+          <Property Name="field_comment" Type="varchar" MaxLength="150" />
+          <Property Name="field_phone_work" Type="varchar" MaxLength="80" />
+          <Property Name="field_phone_home" Type="varchar" MaxLength="80" />
+          <Property Name="field_phone_mobile" Type="varchar" MaxLength="80" />
+          <Property Name="field_email" Type="varchar" MaxLength="100" />
+          <Property Name="inter_count" Type="smallint" />
+          <Property Name="address_fact" Type="varchar" MaxLength="150" />
+          <Property Name="address_law" Type="varchar" MaxLength="150" />
+          <Property Name="computer_count" Type="smallint" />
+          <Property Name="manager_count" Type="smallint" />
+          <Property Name="INN" Type="varchar" MaxLength="50" />
+          <Property Name="KPP" Type="varchar" MaxLength="50" />
+          <Property Name="VAT" Type="bit" />
+          <Property Name="VAT_argument" Type="varchar" MaxLength="1024" />
+          <Property Name="recvisits" Type="varchar" MaxLength="1024" />
+          <Property Name="description" Type="text" />
+          <Property Name="fin_head" Type="varchar" MaxLength="150" />
+          <Property Name="fin_position" Type="varchar" MaxLength="150" />
+          <Property Name="work_on" Type="varchar" MaxLength="80" />
+          <Property Name="ind_licence" Type="varchar" MaxLength="50" />
+          <Property Name="ind_tax" Type="varchar" MaxLength="50" />
+          <Property Name="ind_inn" Type="varchar" MaxLength="50" />
+          <Property Name="ind_register" Type="varchar" MaxLength="50" />
+          <Property Name="desc_control" Type="text" />
+          <Property Name="login" Type="varchar" MaxLength="10" />
+          <Property Name="password" Type="varchar" MaxLength="10" />
+          <Property Name="folder" Type="varchar" MaxLength="30" />
+          <Property Name="dictaphone" Type="int" />
+          <Property Name="notebook" Type="int" />
+          <Property Name="computer" Type="int" />
+          <Property Name="pda" Type="int" />
+          <Property Name="state_id" Type="tinyint" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "MICRouter.dbo.super_work_type_list_v" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="super_work_type_list_v">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="name" />
+          </Key>
+          <Property Name="id" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="ord" Type="tinyint" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "MICRouter.dbo.super_works_v" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="super_works_v">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="supervisor_id" />
+            <PropertyRef Name="super_work_type_id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="supervisor_id" Type="int" Nullable="false" />
+          <Property Name="super_work_type_id" Type="tinyint" Nullable="false" />
+          <Property Name="order" Type="tinyint" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "MICRouter.router.place_list" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="place_list">
+          <Key>
+            <PropertyRef Name="place_type" />
+          </Key>
+          <Property Name="place_type" Type="int" Nullable="false" />
+          <Property Name="place_id" Type="int" />
+          <Property Name="name" Type="nvarchar" MaxLength="100" />
+          <Property Name="region_name" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <Association Name="FK_super_agreements_super_agree_types">
+          <End Role="super_agree_types" Type="Self.super_agree_types" Multiplicity="1" />
+          <End Role="super_agreements" Type="Self.super_agreements" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="super_agree_types">
+              <PropertyRef Name="super_agree_type_id" />
+            </Principal>
+            <Dependent Role="super_agreements">
+              <PropertyRef Name="super_agree_type_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_super_agreements_supervisors">
+          <End Role="supervisors" Type="Self.supervisors" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="super_agreements" Type="Self.super_agreements" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="supervisors">
+              <PropertyRef Name="supervisor_id" />
+            </Principal>
+            <Dependent Role="super_agreements">
+              <PropertyRef Name="supervisor_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_super_managers_supervisors">
+          <End Role="supervisors" Type="Self.supervisors" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="super_managers" Type="Self.super_managers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="supervisors">
+              <PropertyRef Name="supervisor_id" />
+            </Principal>
+            <Dependent Role="super_managers">
+              <PropertyRef Name="supervisor_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_super_places_place_types">
+          <End Role="super_place_types" Type="Self.super_place_types" Multiplicity="1" />
+          <End Role="super_places" Type="Self.super_places" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="super_place_types">
+              <PropertyRef Name="super_place_type_id" />
+            </Principal>
+            <Dependent Role="super_places">
+              <PropertyRef Name="super_place_type_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_super_places_super_territory_types">
+          <End Role="super_territory_types" Type="Self.super_territory_types" Multiplicity="1" />
+          <End Role="super_places" Type="Self.super_places" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="super_territory_types">
+              <PropertyRef Name="super_territory_type_id" />
+            </Principal>
+            <Dependent Role="super_places">
+              <PropertyRef Name="super_territory_type_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_super_places_supervisors">
+          <End Role="supervisors" Type="Self.supervisors" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="super_places" Type="Self.super_places" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="supervisors">
+              <PropertyRef Name="supervisor_id" />
+            </Principal>
+            <Dependent Role="super_places">
+              <PropertyRef Name="supervisor_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_super_properties_super_states">
+          <End Role="super_states" Type="Self.super_states" Multiplicity="1" />
+          <End Role="super_properties" Type="Self.super_properties" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="super_states">
+              <PropertyRef Name="super_state_id" />
+            </Principal>
+            <Dependent Role="super_properties">
+              <PropertyRef Name="super_state_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_supervisor_properties_supervisors">
+          <End Role="supervisors" Type="Self.supervisors" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="super_properties" Type="Self.super_properties" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="supervisors">
+              <PropertyRef Name="supervisor_id" />
+            </Principal>
+            <Dependent Role="super_properties">
+              <PropertyRef Name="supervisor_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_supervisor_works_supervisor_work_types">
+          <End Role="super_work_types" Type="Self.super_work_types" Multiplicity="1" />
+          <End Role="super_works" Type="Self.super_works" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="super_work_types">
+              <PropertyRef Name="super_work_type_id" />
+            </Principal>
+            <Dependent Role="super_works">
+              <PropertyRef Name="super_work_type_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_supervisor_works_supervisors">
+          <End Role="supervisors" Type="Self.supervisors" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="super_works" Type="Self.super_works" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="supervisors">
+              <PropertyRef Name="supervisor_id" />
+            </Principal>
+            <Dependent Role="super_works">
+              <PropertyRef Name="supervisor_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="super_current_state" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="tinyint">
+          <Parameter Name="super_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="super_current_states" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <ReturnType>
+            <CollectionType>
+              <RowType>
+                <Property Name="super_id" Type="int" />
+                <Property Name="state_id" Type="tinyint" />
+              </RowType>
+            </CollectionType>
+          </ReturnType>
+        </Function>
+        <Function Name="super_list" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="survey_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="super_manager_check_params" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+          <Parameter Name="edit" Type="tinyint" Mode="In" />
+          <Parameter Name="manager_id" Type="int" Mode="In" />
+          <Parameter Name="workplace_type_id" Type="tinyint" Mode="In" />
+          <Parameter Name="super_manager_id" Type="int" Mode="In" />
+          <Parameter Name="supervisor_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="super_manager_delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="manager_id" Type="int" Mode="In" />
+          <Parameter Name="workplace_type_id" Type="tinyint" Mode="In" />
+          <Parameter Name="super_manager_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="super_manager_update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="manager_id" Type="int" Mode="In" />
+          <Parameter Name="workplace_type_id" Type="tinyint" Mode="In" />
+          <Parameter Name="super_manager_id" Type="int" Mode="In" />
+          <Parameter Name="supervisor_id" Type="int" Mode="In" />
+          <Parameter Name="name" Type="varchar" Mode="In" />
+          <Parameter Name="phone" Type="varchar" Mode="In" />
+          <Parameter Name="email" Type="varchar" Mode="In" />
+          <Parameter Name="desc" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="super_place" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+          <Parameter Name="supervisor_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="super_territories_show" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="terr_list_id" Type="int" Mode="In" />
+          <Parameter Name="state_id" Type="tinyint" Mode="In" />
+          <Parameter Name="work_type_id" Type="tinyint" Mode="In" />
+          <Parameter Name="agree_type_id" Type="tinyint" Mode="In" />
+          <Parameter Name="tablet_count" Type="int" Mode="In" />
+        </Function>
+        <Function Name="supervisor_add" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="manager_id" Type="int" Mode="In" />
+          <Parameter Name="workplace_type_id" Type="tinyint" Mode="In" />
+          <Parameter Name="name_fact" Type="varchar" Mode="In" />
+          <Parameter Name="state_id" Type="tinyint" Mode="In" />
+          <Parameter Name="name_law" Type="varchar" Mode="In" />
+          <Parameter Name="head_name" Type="varchar" Mode="In" />
+          <Parameter Name="head_comment" Type="varchar" Mode="In" />
+          <Parameter Name="head_phone_work" Type="varchar" Mode="In" />
+          <Parameter Name="head_phone_home" Type="varchar" Mode="In" />
+          <Parameter Name="head_phone_mobile" Type="varchar" Mode="In" />
+          <Parameter Name="fax" Type="varchar" Mode="In" />
+          <Parameter Name="http" Type="varchar" Mode="In" />
+          <Parameter Name="head_email" Type="varchar" Mode="In" />
+          <Parameter Name="field_name" Type="varchar" Mode="In" />
+          <Parameter Name="field_comment" Type="varchar" Mode="In" />
+          <Parameter Name="field_phone_work" Type="varchar" Mode="In" />
+          <Parameter Name="field_phone_home" Type="varchar" Mode="In" />
+          <Parameter Name="field_phone_mobile" Type="varchar" Mode="In" />
+          <Parameter Name="field_email" Type="varchar" Mode="In" />
+          <Parameter Name="inter_count" Type="smallint" Mode="In" />
+          <Parameter Name="address_fact" Type="varchar" Mode="In" />
+          <Parameter Name="address_law" Type="varchar" Mode="In" />
+          <Parameter Name="computer_count" Type="smallint" Mode="In" />
+          <Parameter Name="manager_count" Type="smallint" Mode="In" />
+          <Parameter Name="INN" Type="varchar" Mode="In" />
+          <Parameter Name="KPP" Type="varchar" Mode="In" />
+          <Parameter Name="VAT" Type="bit" Mode="In" />
+          <Parameter Name="VAT_argument" Type="varchar" Mode="In" />
+          <Parameter Name="recvisits" Type="varchar" Mode="In" />
+          <Parameter Name="description" Type="text" Mode="In" />
+          <Parameter Name="fin_head" Type="varchar" Mode="In" />
+          <Parameter Name="fin_position" Type="varchar" Mode="In" />
+          <Parameter Name="work_on" Type="varchar" Mode="In" />
+          <Parameter Name="ind_licence" Type="varchar" Mode="In" />
+          <Parameter Name="ind_tax" Type="varchar" Mode="In" />
+          <Parameter Name="ind_inn" Type="varchar" Mode="In" />
+          <Parameter Name="ind_register" Type="varchar" Mode="In" />
+          <Parameter Name="desc_control" Type="text" Mode="In" />
+          <Parameter Name="login" Type="varchar" Mode="In" />
+          <Parameter Name="password" Type="varchar" Mode="In" />
+          <Parameter Name="folder" Type="varchar" Mode="In" />
+          <Parameter Name="dictaphone" Type="int" Mode="In" />
+          <Parameter Name="notebook" Type="int" Mode="In" />
+          <Parameter Name="computer" Type="int" Mode="In" />
+          <Parameter Name="pda" Type="int" Mode="In" />
+        </Function>
+        <Function Name="supervisor_agreement_add" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="manager_id" Type="int" Mode="In" />
+          <Parameter Name="workplace_type_id" Type="tinyint" Mode="In" />
+          <Parameter Name="supervisor_id" Type="int" Mode="In" />
+          <Parameter Name="super_agree_type_id" Type="tinyint" Mode="In" />
+        </Function>
+        <Function Name="supervisor_agreement_check_params" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+          <Parameter Name="edit" Type="tinyint" Mode="In" />
+          <Parameter Name="manager_id" Type="int" Mode="In" />
+          <Parameter Name="workplace_type_id" Type="tinyint" Mode="In" />
+          <Parameter Name="super_agree_id" Type="int" Mode="In" />
+          <Parameter Name="supervisor_id" Type="int" Mode="In" />
+          <Parameter Name="super_agree_type_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="supervisor_agreement_del" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="manager_id" Type="int" Mode="In" />
+          <Parameter Name="workplace_type_id" Type="tinyint" Mode="In" />
+          <Parameter Name="super_agree_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="supervisor_check_params" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+          <Parameter Name="edit" Type="tinyint" Mode="In" />
+          <Parameter Name="manager_id" Type="int" Mode="In" />
+          <Parameter Name="workplace_type_id" Type="tinyint" Mode="In" />
+          <Parameter Name="supervisor_id" Type="int" Mode="In" />
+          <Parameter Name="state_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="supervisor_delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="manager_id" Type="int" Mode="In" />
+          <Parameter Name="workplace_type_id" Type="tinyint" Mode="In" />
+          <Parameter Name="supervisor_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="supervisor_event_add" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="manager_id" Type="int" Mode="In" />
+          <Parameter Name="workplace_type_id" Type="tinyint" Mode="In" />
+          <Parameter Name="supervisor_id" Type="int" Mode="In" />
+          <Parameter Name="event_date" Type="datetime" Mode="In" />
+          <Parameter Name="text" Type="varchar" Mode="In" />
+          <Parameter Name="description" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="supervisor_event_check_params" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+          <Parameter Name="edit" Type="tinyint" Mode="In" />
+          <Parameter Name="manager_id" Type="int" Mode="In" />
+          <Parameter Name="workplace_type_id" Type="tinyint" Mode="In" />
+          <Parameter Name="supervisor_event_id" Type="int" Mode="In" />
+          <Parameter Name="supervisor_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="supervisor_event_delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="manager_id" Type="int" Mode="In" />
+          <Parameter Name="workplace_type_id" Type="tinyint" Mode="In" />
+          <Parameter Name="supervisor_event_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="supervisor_event_update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="manager_id" Type="int" Mode="In" />
+          <Parameter Name="workplace_type_id" Type="tinyint" Mode="In" />
+          <Parameter Name="supervisor_event_id" Type="int" Mode="In" />
+          <Parameter Name="event_date" Type="datetime" Mode="In" />
+          <Parameter Name="text" Type="varchar" Mode="In" />
+          <Parameter Name="description" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="supervisor_place_add" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="manager_id" Type="int" Mode="In" />
+          <Parameter Name="workplace_type_id" Type="tinyint" Mode="In" />
+          <Parameter Name="supervisor_id" Type="int" Mode="In" />
+          <Parameter Name="terr_list_id" Type="int" Mode="In" />
+          <Parameter Name="super_territory_type_id" Type="tinyint" Mode="In" />
+        </Function>
+        <Function Name="supervisor_place_check_params" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+          <Parameter Name="edit" Type="tinyint" Mode="In" />
+          <Parameter Name="manager_id" Type="int" Mode="In" />
+          <Parameter Name="workplace_type_id" Type="tinyint" Mode="In" />
+          <Parameter Name="super_place_id" Type="int" Mode="In" />
+          <Parameter Name="supervisor_id" Type="int" Mode="In" />
+          <Parameter Name="territory_id" Type="int" Mode="In" />
+          <Parameter Name="super_territory_type_id" Type="tinyint" Mode="In" />
+          <Parameter Name="super_place_type_id" Type="tinyint" Mode="In" />
+        </Function>
+        <Function Name="supervisor_place_delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="manager_id" Type="int" Mode="In" />
+          <Parameter Name="workplace_type_id" Type="tinyint" Mode="In" />
+          <Parameter Name="super_place_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="supervisor_place_update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="manager_id" Type="int" Mode="In" />
+          <Parameter Name="workplace_type_id" Type="tinyint" Mode="In" />
+          <Parameter Name="super_place_id" Type="int" Mode="In" />
+          <Parameter Name="supervisor_id" Type="int" Mode="In" />
+          <Parameter Name="terr_list_id" Type="int" Mode="In" />
+          <Parameter Name="super_territory_type_id" Type="tinyint" Mode="In" />
+        </Function>
+        <Function Name="supervisor_setstate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="manager_id" Type="int" Mode="In" />
+          <Parameter Name="workplace_type_id" Type="tinyint" Mode="In" />
+          <Parameter Name="supervisor_id" Type="smallint" Mode="In" />
+          <Parameter Name="catalogue_state_id" Type="tinyint" Mode="In" />
+        </Function>
+        <Function Name="supervisor_update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="manager_id" Type="int" Mode="In" />
+          <Parameter Name="workplace_type_id" Type="tinyint" Mode="In" />
+          <Parameter Name="supervisor_id" Type="int" Mode="In" />
+          <Parameter Name="name_fact" Type="varchar" Mode="In" />
+          <Parameter Name="state_id" Type="tinyint" Mode="In" />
+          <Parameter Name="name_law" Type="varchar" Mode="In" />
+          <Parameter Name="head_name" Type="varchar" Mode="In" />
+          <Parameter Name="head_comment" Type="varchar" Mode="In" />
+          <Parameter Name="head_phone_work" Type="varchar" Mode="In" />
+          <Parameter Name="head_phone_home" Type="varchar" Mode="In" />
+          <Parameter Name="head_phone_mobile" Type="varchar" Mode="In" />
+          <Parameter Name="fax" Type="varchar" Mode="In" />
+          <Parameter Name="http" Type="varchar" Mode="In" />
+          <Parameter Name="head_email" Type="varchar" Mode="In" />
+          <Parameter Name="field_name" Type="varchar" Mode="In" />
+          <Parameter Name="field_comment" Type="varchar" Mode="In" />
+          <Parameter Name="field_phone_work" Type="varchar" Mode="In" />
+          <Parameter Name="field_phone_home" Type="varchar" Mode="In" />
+          <Parameter Name="field_phone_mobile" Type="varchar" Mode="In" />
+          <Parameter Name="field_email" Type="varchar" Mode="In" />
+          <Parameter Name="inter_count" Type="smallint" Mode="In" />
+          <Parameter Name="address_fact" Type="varchar" Mode="In" />
+          <Parameter Name="address_law" Type="varchar" Mode="In" />
+          <Parameter Name="computer_count" Type="smallint" Mode="In" />
+          <Parameter Name="manager_count" Type="smallint" Mode="In" />
+          <Parameter Name="INN" Type="varchar" Mode="In" />
+          <Parameter Name="KPP" Type="varchar" Mode="In" />
+          <Parameter Name="VAT" Type="bit" Mode="In" />
+          <Parameter Name="VAT_argument" Type="varchar" Mode="In" />
+          <Parameter Name="recvisits" Type="varchar" Mode="In" />
+          <Parameter Name="description" Type="text" Mode="In" />
+          <Parameter Name="fin_head" Type="varchar" Mode="In" />
+          <Parameter Name="fin_position" Type="varchar" Mode="In" />
+          <Parameter Name="work_on" Type="varchar" Mode="In" />
+          <Parameter Name="ind_licence" Type="varchar" Mode="In" />
+          <Parameter Name="ind_tax" Type="varchar" Mode="In" />
+          <Parameter Name="ind_inn" Type="varchar" Mode="In" />
+          <Parameter Name="ind_register" Type="varchar" Mode="In" />
+          <Parameter Name="desc_control" Type="text" Mode="In" />
+          <Parameter Name="login" Type="varchar" Mode="In" />
+          <Parameter Name="password" Type="varchar" Mode="In" />
+          <Parameter Name="folder" Type="varchar" Mode="In" />
+          <Parameter Name="dictaphone" Type="int" Mode="In" />
+          <Parameter Name="notebook" Type="int" Mode="In" />
+          <Parameter Name="computer" Type="int" Mode="In" />
+          <Parameter Name="pda" Type="int" Mode="In" />
+        </Function>
+        <Function Name="supervisor_work_add" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="manager_id" Type="int" Mode="In" />
+          <Parameter Name="workplace_type_id" Type="tinyint" Mode="In" />
+          <Parameter Name="supervisor_id" Type="int" Mode="In" />
+          <Parameter Name="super_work_type_id" Type="tinyint" Mode="In" />
+        </Function>
+        <Function Name="supervisor_work_check_params" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+          <Parameter Name="edit" Type="tinyint" Mode="In" />
+          <Parameter Name="manager_id" Type="int" Mode="In" />
+          <Parameter Name="workplace_type_id" Type="tinyint" Mode="In" />
+          <Parameter Name="super_work_id" Type="int" Mode="In" />
+          <Parameter Name="supervisor_id" Type="int" Mode="In" />
+          <Parameter Name="super_work_type_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="supervisor_work_del" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="manager_id" Type="int" Mode="In" />
+          <Parameter Name="workplace_type_id" Type="tinyint" Mode="In" />
+          <Parameter Name="super_work_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="supervisor_work_update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="manager_id" Type="int" Mode="In" />
+          <Parameter Name="workplace_type_id" Type="tinyint" Mode="In" />
+          <Parameter Name="super_work_id" Type="int" Mode="In" />
+          <Parameter Name="supervisor_id" Type="int" Mode="In" />
+          <Parameter Name="super_work_type_id" Type="tinyint" Mode="In" />
+        </Function>
+        <Function Name="router_manager_add" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="router">
+          <Parameter Name="supervisor_id" Type="int" Mode="In" />
+          <Parameter Name="name" Type="varchar" Mode="In" />
+          <Parameter Name="phone" Type="varchar" Mode="In" />
+          <Parameter Name="email" Type="varchar" Mode="In" />
+          <Parameter Name="desc" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="router_manager_delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="router">
+          <Parameter Name="super_manager_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="router_manager_update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="router">
+          <Parameter Name="super_manager_id" Type="int" Mode="In" />
+          <Parameter Name="supervisor_id" Type="int" Mode="In" />
+          <Parameter Name="name" Type="varchar" Mode="In" />
+          <Parameter Name="phone" Type="varchar" Mode="In" />
+          <Parameter Name="email" Type="varchar" Mode="In" />
+          <Parameter Name="desc" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="router_super_list" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="router">
+          <Parameter Name="place_type" Type="tinyint" Mode="In" />
+          <Parameter Name="place_id" Type="int" Mode="In" />
+          <Parameter Name="state_id" Type="tinyint" Mode="In" />
+          <Parameter Name="work_type_id" Type="tinyint" Mode="In" />
+        </Function>
+        <Function Name="router_supervisor_add" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="router">
+          <Parameter Name="name_fact" Type="varchar" Mode="In" />
+          <Parameter Name="state_id" Type="tinyint" Mode="In" />
+          <Parameter Name="name_law" Type="varchar" Mode="In" />
+          <Parameter Name="head_name" Type="varchar" Mode="In" />
+          <Parameter Name="head_comment" Type="varchar" Mode="In" />
+          <Parameter Name="head_phone_work" Type="varchar" Mode="In" />
+          <Parameter Name="head_phone_home" Type="varchar" Mode="In" />
+          <Parameter Name="head_phone_mobile" Type="varchar" Mode="In" />
+          <Parameter Name="fax" Type="varchar" Mode="In" />
+          <Parameter Name="http" Type="varchar" Mode="In" />
+          <Parameter Name="head_email" Type="varchar" Mode="In" />
+          <Parameter Name="field_name" Type="varchar" Mode="In" />
+          <Parameter Name="field_comment" Type="varchar" Mode="In" />
+          <Parameter Name="field_phone_work" Type="varchar" Mode="In" />
+          <Parameter Name="field_phone_home" Type="varchar" Mode="In" />
+          <Parameter Name="field_phone_mobile" Type="varchar" Mode="In" />
+          <Parameter Name="field_email" Type="varchar" Mode="In" />
+          <Parameter Name="inter_count" Type="smallint" Mode="In" />
+          <Parameter Name="address_fact" Type="varchar" Mode="In" />
+          <Parameter Name="address_law" Type="varchar" Mode="In" />
+          <Parameter Name="computer_count" Type="smallint" Mode="In" />
+          <Parameter Name="manager_count" Type="smallint" Mode="In" />
+          <Parameter Name="INN" Type="varchar" Mode="In" />
+          <Parameter Name="KPP" Type="varchar" Mode="In" />
+          <Parameter Name="VAT" Type="bit" Mode="In" />
+          <Parameter Name="VAT_argument" Type="varchar" Mode="In" />
+          <Parameter Name="recvisits" Type="varchar" Mode="In" />
+          <Parameter Name="description" Type="text" Mode="In" />
+          <Parameter Name="fin_head" Type="varchar" Mode="In" />
+          <Parameter Name="fin_position" Type="varchar" Mode="In" />
+          <Parameter Name="work_on" Type="varchar" Mode="In" />
+          <Parameter Name="ind_licence" Type="varchar" Mode="In" />
+          <Parameter Name="ind_tax" Type="varchar" Mode="In" />
+          <Parameter Name="ind_inn" Type="varchar" Mode="In" />
+          <Parameter Name="ind_register" Type="varchar" Mode="In" />
+          <Parameter Name="desc_control" Type="text" Mode="In" />
+          <Parameter Name="login" Type="varchar" Mode="In" />
+          <Parameter Name="password" Type="varchar" Mode="In" />
+          <Parameter Name="folder" Type="varchar" Mode="In" />
+          <Parameter Name="dictaphone" Type="int" Mode="In" />
+          <Parameter Name="notebook" Type="int" Mode="In" />
+          <Parameter Name="computer" Type="int" Mode="In" />
+          <Parameter Name="pda" Type="int" Mode="In" />
+        </Function>
+        <Function Name="router_supervisor_agreement_add" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="router">
+          <Parameter Name="supervisor_id" Type="int" Mode="In" />
+          <Parameter Name="super_agree_type_id" Type="tinyint" Mode="In" />
+        </Function>
+        <Function Name="router_supervisor_agreement_del" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="router">
+          <Parameter Name="super_agree_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="router_supervisor_delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="router">
+          <Parameter Name="supervisor_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="router_supervisor_place_add" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="router">
+          <Parameter Name="supervisor_id" Type="int" Mode="In" />
+          <Parameter Name="territory_id" Type="int" Mode="In" />
+          <Parameter Name="super_territory_type_id" Type="tinyint" Mode="In" />
+          <Parameter Name="super_place_type_id" Type="tinyint" Mode="In" />
+        </Function>
+        <Function Name="router_supervisor_place_delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="router">
+          <Parameter Name="super_place_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="router_supervisor_place_update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="router">
+          <Parameter Name="super_place_id" Type="int" Mode="In" />
+          <Parameter Name="supervisor_id" Type="int" Mode="In" />
+          <Parameter Name="territory_id" Type="int" Mode="In" />
+          <Parameter Name="super_place_type_id" Type="int" Mode="In" />
+          <Parameter Name="super_territory_type_id" Type="tinyint" Mode="In" />
+        </Function>
+        <Function Name="router_supervisor_update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="router">
+          <Parameter Name="supervisor_id" Type="int" Mode="In" />
+          <Parameter Name="name_fact" Type="varchar" Mode="In" />
+          <Parameter Name="state_id" Type="tinyint" Mode="In" />
+          <Parameter Name="name_law" Type="varchar" Mode="In" />
+          <Parameter Name="head_name" Type="varchar" Mode="In" />
+          <Parameter Name="head_comment" Type="varchar" Mode="In" />
+          <Parameter Name="head_phone_work" Type="varchar" Mode="In" />
+          <Parameter Name="head_phone_home" Type="varchar" Mode="In" />
+          <Parameter Name="head_phone_mobile" Type="varchar" Mode="In" />
+          <Parameter Name="fax" Type="varchar" Mode="In" />
+          <Parameter Name="http" Type="varchar" Mode="In" />
+          <Parameter Name="head_email" Type="varchar" Mode="In" />
+          <Parameter Name="field_name" Type="varchar" Mode="In" />
+          <Parameter Name="field_comment" Type="varchar" Mode="In" />
+          <Parameter Name="field_phone_work" Type="varchar" Mode="In" />
+          <Parameter Name="field_phone_home" Type="varchar" Mode="In" />
+          <Parameter Name="field_phone_mobile" Type="varchar" Mode="In" />
+          <Parameter Name="field_email" Type="varchar" Mode="In" />
+          <Parameter Name="inter_count" Type="smallint" Mode="In" />
+          <Parameter Name="address_fact" Type="varchar" Mode="In" />
+          <Parameter Name="address_law" Type="varchar" Mode="In" />
+          <Parameter Name="computer_count" Type="smallint" Mode="In" />
+          <Parameter Name="manager_count" Type="smallint" Mode="In" />
+          <Parameter Name="INN" Type="varchar" Mode="In" />
+          <Parameter Name="KPP" Type="varchar" Mode="In" />
+          <Parameter Name="VAT" Type="bit" Mode="In" />
+          <Parameter Name="VAT_argument" Type="varchar" Mode="In" />
+          <Parameter Name="recvisits" Type="varchar" Mode="In" />
+          <Parameter Name="description" Type="text" Mode="In" />
+          <Parameter Name="fin_head" Type="varchar" Mode="In" />
+          <Parameter Name="fin_position" Type="varchar" Mode="In" />
+          <Parameter Name="work_on" Type="varchar" Mode="In" />
+          <Parameter Name="ind_licence" Type="varchar" Mode="In" />
+          <Parameter Name="ind_tax" Type="varchar" Mode="In" />
+          <Parameter Name="ind_inn" Type="varchar" Mode="In" />
+          <Parameter Name="ind_register" Type="varchar" Mode="In" />
+          <Parameter Name="desc_control" Type="text" Mode="In" />
+          <Parameter Name="login" Type="varchar" Mode="In" />
+          <Parameter Name="password" Type="varchar" Mode="In" />
+          <Parameter Name="folder" Type="varchar" Mode="In" />
+          <Parameter Name="dictaphone" Type="int" Mode="In" />
+          <Parameter Name="notebook" Type="int" Mode="In" />
+          <Parameter Name="computer" Type="int" Mode="In" />
+          <Parameter Name="pda" Type="int" Mode="In" />
+        </Function>
+        <Function Name="router_supervisor_work_add" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="router">
+          <Parameter Name="supervisor_id" Type="int" Mode="In" />
+          <Parameter Name="super_work_type_id" Type="tinyint" Mode="In" />
+        </Function>
+        <Function Name="router_supervisor_work_del" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="router">
+          <Parameter Name="super_work_id" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="Хранилище RealRepositoryContainer">
+          <EntitySet Name="super_agree_types" EntityType="Self.super_agree_types" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="super_agreements" EntityType="Self.super_agreements" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="super_managers" EntityType="Self.super_managers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="super_place_types" EntityType="Self.super_place_types" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="super_places" EntityType="Self.super_places" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="super_properties" EntityType="Self.super_properties" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="super_states" EntityType="Self.super_states" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="super_territory_types" EntityType="Self.super_territory_types" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="super_work_types" EntityType="Self.super_work_types" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="super_works" EntityType="Self.super_works" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="supervisors" EntityType="Self.supervisors" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="super_manager_v" EntityType="Self.super_manager_v" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [super_manager_v].[id] AS [id], 
+    [super_manager_v].[supervisor_id] AS [supervisor_id], 
+    [super_manager_v].[name] AS [name], 
+    [super_manager_v].[phone] AS [phone], 
+    [super_manager_v].[email] AS [email], 
+    [super_manager_v].[desc] AS [desc], 
+    [super_manager_v].[canstate] AS [canstate], 
+    [super_manager_v].[edit] AS [edit], 
+    [super_manager_v].[del] AS [del]
+    FROM [dbo].[super_manager_v] AS [super_manager_v]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="super_state_list_v" EntityType="Self.super_state_list_v" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [super_state_list_v].[id] AS [id], 
+    [super_state_list_v].[name] AS [name]
+    FROM [dbo].[super_state_list_v] AS [super_state_list_v]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="super_territories_show_v" EntityType="Self.super_territories_show_v" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [super_territories_show_v].[id] AS [id], 
+    [super_territories_show_v].[super_place_name] AS [super_place_name], 
+    [super_territories_show_v].[supervisor_id] AS [supervisor_id], 
+    [super_territories_show_v].[super_territory_type] AS [super_territory_type], 
+    [super_territories_show_v].[name_fact] AS [name_fact], 
+    [super_territories_show_v].[head_name] AS [head_name], 
+    [super_territories_show_v].[head_phone_work] AS [head_phone_work], 
+    [super_territories_show_v].[head_email] AS [head_email], 
+    [super_territories_show_v].[login] AS [login], 
+    [super_territories_show_v].[password] AS [password], 
+    [super_territories_show_v].[edit] AS [edit], 
+    [super_territories_show_v].[del] AS [del], 
+    [super_territories_show_v].[canstate] AS [canstate], 
+    [super_territories_show_v].[super_territory_type_id] AS [super_territory_type_id], 
+    [super_territories_show_v].[terr_list_id] AS [terr_list_id], 
+    [super_territories_show_v].[state_id] AS [state_id], 
+    [super_territories_show_v].[super_work_type_id] AS [super_work_type_id], 
+    [super_territories_show_v].[computer] AS [computer]
+    FROM [dbo].[super_territories_show_v] AS [super_territories_show_v]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="super_territories_v" EntityType="Self.super_territories_v" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [super_territories_v].[id] AS [id], 
+    [super_territories_v].[terr_list_id] AS [terr_list_id], 
+    [super_territories_v].[supervisor_id] AS [supervisor_id], 
+    [super_territories_v].[super_territory_type_id] AS [super_territory_type_id]
+    FROM [dbo].[super_territories_v] AS [super_territories_v]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="super_territory_list_v" EntityType="Self.super_territory_list_v" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [super_territory_list_v].[id] AS [id], 
+    [super_territory_list_v].[name] AS [name]
+    FROM [dbo].[super_territory_list_v] AS [super_territory_list_v]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="super_v" EntityType="Self.super_v" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [super_v].[id] AS [id], 
+    [super_v].[name_fact] AS [name_fact], 
+    [super_v].[name_law] AS [name_law], 
+    [super_v].[head_name] AS [head_name], 
+    [super_v].[head_comment] AS [head_comment], 
+    [super_v].[head_phone_work] AS [head_phone_work], 
+    [super_v].[head_phone_home] AS [head_phone_home], 
+    [super_v].[head_phone_mobile] AS [head_phone_mobile], 
+    [super_v].[fax] AS [fax], 
+    [super_v].[http] AS [http], 
+    [super_v].[head_email] AS [head_email], 
+    [super_v].[field_name] AS [field_name], 
+    [super_v].[field_comment] AS [field_comment], 
+    [super_v].[field_phone_work] AS [field_phone_work], 
+    [super_v].[field_phone_home] AS [field_phone_home], 
+    [super_v].[field_phone_mobile] AS [field_phone_mobile], 
+    [super_v].[field_email] AS [field_email], 
+    [super_v].[inter_count] AS [inter_count], 
+    [super_v].[address_fact] AS [address_fact], 
+    [super_v].[address_law] AS [address_law], 
+    [super_v].[computer_count] AS [computer_count], 
+    [super_v].[manager_count] AS [manager_count], 
+    [super_v].[INN] AS [INN], 
+    [super_v].[KPP] AS [KPP], 
+    [super_v].[VAT] AS [VAT], 
+    [super_v].[VAT_argument] AS [VAT_argument], 
+    [super_v].[recvisits] AS [recvisits], 
+    [super_v].[description] AS [description], 
+    [super_v].[fin_head] AS [fin_head], 
+    [super_v].[fin_position] AS [fin_position], 
+    [super_v].[work_on] AS [work_on], 
+    [super_v].[ind_licence] AS [ind_licence], 
+    [super_v].[ind_tax] AS [ind_tax], 
+    [super_v].[ind_inn] AS [ind_inn], 
+    [super_v].[ind_register] AS [ind_register], 
+    [super_v].[desc_control] AS [desc_control], 
+    [super_v].[login] AS [login], 
+    [super_v].[password] AS [password], 
+    [super_v].[folder] AS [folder], 
+    [super_v].[dictaphone] AS [dictaphone], 
+    [super_v].[notebook] AS [notebook], 
+    [super_v].[computer] AS [computer], 
+    [super_v].[pda] AS [pda], 
+    [super_v].[state_id] AS [state_id]
+    FROM [dbo].[super_v] AS [super_v]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="super_work_type_list_v" EntityType="Self.super_work_type_list_v" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [super_work_type_list_v].[id] AS [id], 
+    [super_work_type_list_v].[name] AS [name], 
+    [super_work_type_list_v].[ord] AS [ord]
+    FROM [dbo].[super_work_type_list_v] AS [super_work_type_list_v]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="super_works_v" EntityType="Self.super_works_v" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [super_works_v].[id] AS [id], 
+    [super_works_v].[supervisor_id] AS [supervisor_id], 
+    [super_works_v].[super_work_type_id] AS [super_work_type_id], 
+    [super_works_v].[order] AS [order]
+    FROM [dbo].[super_works_v] AS [super_works_v]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="place_list" EntityType="Self.place_list" store:Type="Views" store:Schema="router">
+            <DefiningQuery>SELECT 
+    [place_list].[place_type] AS [place_type], 
+    [place_list].[place_id] AS [place_id], 
+    [place_list].[name] AS [name], 
+    [place_list].[region_name] AS [region_name]
+    FROM [router].[place_list] AS [place_list]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_super_agreements_super_agree_types" Association="Self.FK_super_agreements_super_agree_types">
+            <End Role="super_agree_types" EntitySet="super_agree_types" />
+            <End Role="super_agreements" EntitySet="super_agreements" />
+          </AssociationSet>
+          <AssociationSet Name="FK_super_agreements_supervisors" Association="Self.FK_super_agreements_supervisors">
+            <End Role="supervisors" EntitySet="supervisors" />
+            <End Role="super_agreements" EntitySet="super_agreements" />
+          </AssociationSet>
+          <AssociationSet Name="FK_super_managers_supervisors" Association="Self.FK_super_managers_supervisors">
+            <End Role="supervisors" EntitySet="supervisors" />
+            <End Role="super_managers" EntitySet="super_managers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_super_places_place_types" Association="Self.FK_super_places_place_types">
+            <End Role="super_place_types" EntitySet="super_place_types" />
+            <End Role="super_places" EntitySet="super_places" />
+          </AssociationSet>
+          <AssociationSet Name="FK_super_places_super_territory_types" Association="Self.FK_super_places_super_territory_types">
+            <End Role="super_territory_types" EntitySet="super_territory_types" />
+            <End Role="super_places" EntitySet="super_places" />
+          </AssociationSet>
+          <AssociationSet Name="FK_super_places_supervisors" Association="Self.FK_super_places_supervisors">
+            <End Role="supervisors" EntitySet="supervisors" />
+            <End Role="super_places" EntitySet="super_places" />
+          </AssociationSet>
+          <AssociationSet Name="FK_super_properties_super_states" Association="Self.FK_super_properties_super_states">
+            <End Role="super_states" EntitySet="super_states" />
+            <End Role="super_properties" EntitySet="super_properties" />
+          </AssociationSet>
+          <AssociationSet Name="FK_supervisor_properties_supervisors" Association="Self.FK_supervisor_properties_supervisors">
+            <End Role="supervisors" EntitySet="supervisors" />
+            <End Role="super_properties" EntitySet="super_properties" />
+          </AssociationSet>
+          <AssociationSet Name="FK_supervisor_works_supervisor_work_types" Association="Self.FK_supervisor_works_supervisor_work_types">
+            <End Role="super_work_types" EntitySet="super_work_types" />
+            <End Role="super_works" EntitySet="super_works" />
+          </AssociationSet>
+          <AssociationSet Name="FK_supervisor_works_supervisors" Association="Self.FK_supervisor_works_supervisors">
+            <End Role="supervisors" EntitySet="supervisors" />
+            <End Role="super_works" EntitySet="super_works" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RealRepository" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <ComplexType Name="super_current_states_Result">
+          <Property Name="super_id" Type="Int32" />
+          <Property Name="state_id" Type="Byte" />
+        </ComplexType>
+        <EntityType Name="super_managers">
+          <Key>
+            <PropertyRef Name="super_manager_id" />
+          </Key>
+          <Property Name="super_manager_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="supervisor_id" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="phone" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="desc" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="supervisors" Relationship="Self.FK_super_managers_supervisors" FromRole="super_managers" ToRole="supervisors" />
+        </EntityType>
+        <EntityType Name="super_place_types">
+          <Key>
+            <PropertyRef Name="super_place_type_id" />
+          </Key>
+          <Property Name="super_place_type_id" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="super_places" Relationship="Self.FK_super_places_place_types" FromRole="super_place_types" ToRole="super_places" />
+        </EntityType>
+        <EntityType Name="super_places">
+          <Key>
+            <PropertyRef Name="super_place_id" />
+          </Key>
+          <Property Name="super_place_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="supervisor_id" Type="Int32" Nullable="false" />
+          <Property Name="territory_id" Type="Int32" Nullable="false" />
+          <Property Name="super_territory_type_id" Type="Byte" Nullable="false" />
+          <Property Name="super_place_type_id" Type="Byte" Nullable="false" />
+          <NavigationProperty Name="super_place_types" Relationship="Self.FK_super_places_place_types" FromRole="super_places" ToRole="super_place_types" />
+          <NavigationProperty Name="super_territory_types" Relationship="Self.FK_super_places_super_territory_types" FromRole="super_places" ToRole="super_territory_types" />
+          <NavigationProperty Name="supervisors" Relationship="Self.FK_super_places_supervisors" FromRole="super_places" ToRole="supervisors" />
+        </EntityType>
+        <EntityType Name="super_properties">
+          <Key>
+            <PropertyRef Name="super_property_id" />
+          </Key>
+          <Property Name="super_property_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="supervisor_id" Type="Int32" Nullable="false" />
+          <Property Name="super_state_id" Type="Byte" Nullable="false" />
+          <Property Name="manager_id" Type="Int32" Nullable="false" />
+          <Property Name="change_date" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="super_states" Relationship="Self.FK_super_properties_super_states" FromRole="super_properties" ToRole="super_states" />
+          <NavigationProperty Name="supervisors" Relationship="Self.FK_supervisor_properties_supervisors" FromRole="super_properties" ToRole="supervisors" />
+        </EntityType>
+        <EntityType Name="super_states">
+          <Key>
+            <PropertyRef Name="super_state_id" />
+          </Key>
+          <Property Name="super_state_id" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="super_properties" Relationship="Self.FK_super_properties_super_states" FromRole="super_states" ToRole="super_properties" />
+        </EntityType>
+        <EntityType Name="super_territory_types">
+          <Key>
+            <PropertyRef Name="super_territory_type_id" />
+          </Key>
+          <Property Name="super_territory_type_id" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="super_places" Relationship="Self.FK_super_places_super_territory_types" FromRole="super_territory_types" ToRole="super_places" />
+        </EntityType>
+        <EntityType Name="super_work_types">
+          <Key>
+            <PropertyRef Name="super_work_type_id" />
+          </Key>
+          <Property Name="super_work_type_id" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ord" Type="Byte" Nullable="false" />
+          <NavigationProperty Name="super_works" Relationship="Self.FK_supervisor_works_supervisor_work_types" FromRole="super_work_types" ToRole="super_works" />
+        </EntityType>
+        <EntityType Name="super_works">
+          <Key>
+            <PropertyRef Name="super_work_id" />
+          </Key>
+          <Property Name="super_work_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="supervisor_id" Type="Int32" Nullable="false" />
+          <Property Name="super_work_type_id" Type="Byte" Nullable="false" />
+          <NavigationProperty Name="super_work_types" Relationship="Self.FK_supervisor_works_supervisor_work_types" FromRole="super_works" ToRole="super_work_types" />
+          <NavigationProperty Name="supervisors" Relationship="Self.FK_supervisor_works_supervisors" FromRole="super_works" ToRole="supervisors" />
+        </EntityType>
+        <EntityType Name="supervisors">
+          <Key>
+            <PropertyRef Name="supervisor_id" />
+          </Key>
+          <Property Name="supervisor_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name_fact" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="name_law" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="head_name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="head_comment" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="head_phone_work" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="head_phone_home" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="head_phone_mobile" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="fax" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="http" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="head_email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="field_name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="field_comment" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="field_phone_work" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="field_phone_home" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="field_phone_mobile" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="field_email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="inter_count" Type="Int16" />
+          <Property Name="address_fact" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="address_law" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="computer_count" Type="Int16" />
+          <Property Name="manager_count" Type="Int16" />
+          <Property Name="INN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="KPP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="VAT" Type="Boolean" />
+          <Property Name="VAT_argument" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+          <Property Name="recvisits" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="fin_head" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="fin_position" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="work_on" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="ind_licence" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ind_tax" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ind_inn" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ind_register" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="desc_control" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="login" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="folder" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="dictaphone" Type="Int32" />
+          <Property Name="notebook" Type="Int32" />
+          <Property Name="computer" Type="Int32" />
+          <Property Name="pda" Type="Int32" />
+          <NavigationProperty Name="super_managers" Relationship="Self.FK_super_managers_supervisors" FromRole="supervisors" ToRole="super_managers" />
+          <NavigationProperty Name="super_places" Relationship="Self.FK_super_places_supervisors" FromRole="supervisors" ToRole="super_places" />
+          <NavigationProperty Name="super_properties" Relationship="Self.FK_supervisor_properties_supervisors" FromRole="supervisors" ToRole="super_properties" />
+          <NavigationProperty Name="super_works" Relationship="Self.FK_supervisor_works_supervisors" FromRole="supervisors" ToRole="super_works" />
+          <NavigationProperty Name="super_agreements" Relationship="RealRepository.FK_super_agreements_supervisors" FromRole="supervisors" ToRole="super_agreements" />
+        </EntityType>
+        <EntityType Name="super_manager_v">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="supervisor_id" />
+            <PropertyRef Name="name" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="supervisor_id" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="phone" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="desc" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="canstate" Type="Boolean" />
+          <Property Name="edit" Type="Boolean" />
+          <Property Name="del" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="super_state_list_v">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="name" />
+          </Key>
+          <Property Name="id" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="super_territories_show_v">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="supervisor_id" />
+            <PropertyRef Name="name_fact" />
+            <PropertyRef Name="super_territory_type_id" />
+            <PropertyRef Name="super_work_type_id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="super_place_name" Type="String" MaxLength="203" FixedLength="false" Unicode="true" />
+          <Property Name="supervisor_id" Type="Int32" Nullable="false" />
+          <Property Name="super_territory_type" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="name_fact" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="head_name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="head_phone_work" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="head_email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="login" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="edit" Type="Boolean" />
+          <Property Name="del" Type="Boolean" />
+          <Property Name="canstate" Type="Boolean" />
+          <Property Name="super_territory_type_id" Type="Byte" Nullable="false" />
+          <Property Name="terr_list_id" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="state_id" Type="Byte" />
+          <Property Name="super_work_type_id" Type="Byte" Nullable="false" />
+          <Property Name="computer" Type="Int32" />
+        </EntityType>
+        <EntityType Name="super_territories_v">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="supervisor_id" />
+            <PropertyRef Name="super_territory_type_id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="terr_list_id" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="supervisor_id" Type="Int32" Nullable="false" />
+          <Property Name="super_territory_type_id" Type="Byte" Nullable="false" />
+        </EntityType>
+        <EntityType Name="super_territory_list_v">
+          <Key>
+            <PropertyRef Name="name" />
+          </Key>
+          <Property Name="id" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" MaxLength="103" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="super_v">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="name_fact" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name_fact" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="name_law" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="head_name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="head_comment" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="head_phone_work" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="head_phone_home" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="head_phone_mobile" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="fax" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="http" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="head_email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="field_name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="field_comment" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="field_phone_work" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="field_phone_home" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="field_phone_mobile" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="field_email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="inter_count" Type="Int16" />
+          <Property Name="address_fact" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="address_law" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="computer_count" Type="Int16" />
+          <Property Name="manager_count" Type="Int16" />
+          <Property Name="INN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="KPP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="VAT" Type="Boolean" />
+          <Property Name="VAT_argument" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+          <Property Name="recvisits" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="fin_head" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="fin_position" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="work_on" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="ind_licence" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ind_tax" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ind_inn" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ind_register" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="desc_control" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="login" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="folder" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="dictaphone" Type="Int32" />
+          <Property Name="notebook" Type="Int32" />
+          <Property Name="computer" Type="Int32" />
+          <Property Name="pda" Type="Int32" />
+          <Property Name="state_id" Type="Byte" />
+        </EntityType>
+        <EntityType Name="super_work_type_list_v">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="name" />
+          </Key>
+          <Property Name="id" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ord" Type="Byte" />
+        </EntityType>
+        <Association Name="FK_super_managers_supervisors">
+          <End Role="supervisors" Type="Self.supervisors" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="super_managers" Type="Self.super_managers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="supervisors">
+              <PropertyRef Name="supervisor_id" />
+            </Principal>
+            <Dependent Role="super_managers">
+              <PropertyRef Name="supervisor_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_super_places_place_types">
+          <End Role="super_place_types" Type="Self.super_place_types" Multiplicity="1" />
+          <End Role="super_places" Type="Self.super_places" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="super_place_types">
+              <PropertyRef Name="super_place_type_id" />
+            </Principal>
+            <Dependent Role="super_places">
+              <PropertyRef Name="super_place_type_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_super_places_super_territory_types">
+          <End Role="super_territory_types" Type="Self.super_territory_types" Multiplicity="1" />
+          <End Role="super_places" Type="Self.super_places" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="super_territory_types">
+              <PropertyRef Name="super_territory_type_id" />
+            </Principal>
+            <Dependent Role="super_places">
+              <PropertyRef Name="super_territory_type_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_super_places_supervisors">
+          <End Role="supervisors" Type="Self.supervisors" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="super_places" Type="Self.super_places" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="supervisors">
+              <PropertyRef Name="supervisor_id" />
+            </Principal>
+            <Dependent Role="super_places">
+              <PropertyRef Name="supervisor_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_super_properties_super_states">
+          <End Role="super_states" Type="Self.super_states" Multiplicity="1" />
+          <End Role="super_properties" Type="Self.super_properties" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="super_states">
+              <PropertyRef Name="super_state_id" />
+            </Principal>
+            <Dependent Role="super_properties">
+              <PropertyRef Name="super_state_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_supervisor_properties_supervisors">
+          <End Role="supervisors" Type="Self.supervisors" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="super_properties" Type="Self.super_properties" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="supervisors">
+              <PropertyRef Name="supervisor_id" />
+            </Principal>
+            <Dependent Role="super_properties">
+              <PropertyRef Name="supervisor_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_supervisor_works_supervisor_work_types">
+          <End Role="super_work_types" Type="Self.super_work_types" Multiplicity="1" />
+          <End Role="super_works" Type="Self.super_works" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="super_work_types">
+              <PropertyRef Name="super_work_type_id" />
+            </Principal>
+            <Dependent Role="super_works">
+              <PropertyRef Name="super_work_type_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_supervisor_works_supervisors">
+          <End Role="supervisors" Type="Self.supervisors" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="super_works" Type="Self.super_works" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="supervisors">
+              <PropertyRef Name="supervisor_id" />
+            </Principal>
+            <Dependent Role="super_works">
+              <PropertyRef Name="supervisor_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MICRouterEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="super_managers" EntityType="Self.super_managers" />
+          <EntitySet Name="super_place_types" EntityType="Self.super_place_types" />
+          <EntitySet Name="super_places" EntityType="Self.super_places" />
+          <EntitySet Name="super_properties" EntityType="Self.super_properties" />
+          <EntitySet Name="super_states" EntityType="Self.super_states" />
+          <EntitySet Name="super_territory_types" EntityType="Self.super_territory_types" />
+          <EntitySet Name="super_work_types" EntityType="Self.super_work_types" />
+          <EntitySet Name="super_works" EntityType="Self.super_works" />
+          <EntitySet Name="supervisors" EntityType="Self.supervisors" />
+          <EntitySet Name="super_manager_v" EntityType="Self.super_manager_v" />
+          <EntitySet Name="super_state_list_v" EntityType="Self.super_state_list_v" />
+          <EntitySet Name="super_territories_show_v" EntityType="Self.super_territories_show_v" />
+          <EntitySet Name="super_territories_v" EntityType="Self.super_territories_v" />
+          <EntitySet Name="super_territory_list_v" EntityType="Self.super_territory_list_v" />
+          <EntitySet Name="super_v" EntityType="Self.super_v" />
+          <EntitySet Name="super_work_type_list_v" EntityType="Self.super_work_type_list_v" />
+          <AssociationSet Name="FK_super_managers_supervisors" Association="Self.FK_super_managers_supervisors">
+            <End Role="supervisors" EntitySet="supervisors" />
+            <End Role="super_managers" EntitySet="super_managers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_super_places_place_types" Association="Self.FK_super_places_place_types">
+            <End Role="super_place_types" EntitySet="super_place_types" />
+            <End Role="super_places" EntitySet="super_places" />
+          </AssociationSet>
+          <AssociationSet Name="FK_super_places_super_territory_types" Association="Self.FK_super_places_super_territory_types">
+            <End Role="super_territory_types" EntitySet="super_territory_types" />
+            <End Role="super_places" EntitySet="super_places" />
+          </AssociationSet>
+          <AssociationSet Name="FK_super_places_supervisors" Association="Self.FK_super_places_supervisors">
+            <End Role="supervisors" EntitySet="supervisors" />
+            <End Role="super_places" EntitySet="super_places" />
+          </AssociationSet>
+          <AssociationSet Name="FK_super_properties_super_states" Association="Self.FK_super_properties_super_states">
+            <End Role="super_states" EntitySet="super_states" />
+            <End Role="super_properties" EntitySet="super_properties" />
+          </AssociationSet>
+          <AssociationSet Name="FK_supervisor_properties_supervisors" Association="Self.FK_supervisor_properties_supervisors">
+            <End Role="supervisors" EntitySet="supervisors" />
+            <End Role="super_properties" EntitySet="super_properties" />
+          </AssociationSet>
+          <AssociationSet Name="FK_supervisor_works_supervisor_work_types" Association="Self.FK_supervisor_works_supervisor_work_types">
+            <End Role="super_work_types" EntitySet="super_work_types" />
+            <End Role="super_works" EntitySet="super_works" />
+          </AssociationSet>
+          <AssociationSet Name="FK_supervisor_works_supervisors" Association="Self.FK_supervisor_works_supervisors">
+            <End Role="supervisors" EntitySet="supervisors" />
+            <End Role="super_works" EntitySet="super_works" />
+          </AssociationSet>
+          <FunctionImport Name="super_current_states" ReturnType="Collection(RealRepository.super_current_states_Result)" IsComposable="true" />
+          <FunctionImport Name="super_manager_add">
+            <Parameter Name="supervisor_id" Mode="In" Type="Int32" />
+            <Parameter Name="name" Mode="In" Type="String" />
+            <Parameter Name="phone" Mode="In" Type="String" />
+            <Parameter Name="email" Mode="In" Type="String" />
+            <Parameter Name="desc" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="super_manager_delete">
+            <Parameter Name="manager_id" Mode="In" Type="Int32" />
+            <Parameter Name="workplace_type_id" Mode="In" Type="Byte" />
+            <Parameter Name="super_manager_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="super_manager_update">
+            <Parameter Name="manager_id" Mode="In" Type="Int32" />
+            <Parameter Name="workplace_type_id" Mode="In" Type="Byte" />
+            <Parameter Name="super_manager_id" Mode="In" Type="Int32" />
+            <Parameter Name="supervisor_id" Mode="In" Type="Int32" />
+            <Parameter Name="name" Mode="In" Type="String" />
+            <Parameter Name="phone" Mode="In" Type="String" />
+            <Parameter Name="email" Mode="In" Type="String" />
+            <Parameter Name="desc" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="super_territories_show" ReturnType="Collection(RealRepository.super_territories_show_Result)">
+            <Parameter Name="terr_list_id" Mode="In" Type="Int32" />
+            <Parameter Name="state_id" Mode="In" Type="Byte" />
+            <Parameter Name="work_type_id" Mode="In" Type="Byte" />
+            <Parameter Name="agree_type_id" Mode="In" Type="Byte" />
+            <Parameter Name="tablet_count" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="supervisor_add">
+            <Parameter Name="manager_id" Mode="In" Type="Int32" />
+            <Parameter Name="workplace_type_id" Mode="In" Type="Byte" />
+            <Parameter Name="name_fact" Mode="In" Type="String" />
+            <Parameter Name="state_id" Mode="In" Type="Byte" />
+            <Parameter Name="name_law" Mode="In" Type="String" />
+            <Parameter Name="head_name" Mode="In" Type="String" />
+            <Parameter Name="head_comment" Mode="In" Type="String" />
+            <Parameter Name="head_phone_work" Mode="In" Type="String" />
+            <Parameter Name="head_phone_home" Mode="In" Type="String" />
+            <Parameter Name="head_phone_mobile" Mode="In" Type="String" />
+            <Parameter Name="fax" Mode="In" Type="String" />
+            <Parameter Name="http" Mode="In" Type="String" />
+            <Parameter Name="head_email" Mode="In" Type="String" />
+            <Parameter Name="field_name" Mode="In" Type="String" />
+            <Parameter Name="field_comment" Mode="In" Type="String" />
+            <Parameter Name="field_phone_work" Mode="In" Type="String" />
+            <Parameter Name="field_phone_home" Mode="In" Type="String" />
+            <Parameter Name="field_phone_mobile" Mode="In" Type="String" />
+            <Parameter Name="field_email" Mode="In" Type="String" />
+            <Parameter Name="inter_count" Mode="In" Type="Int16" />
+            <Parameter Name="address_fact" Mode="In" Type="String" />
+            <Parameter Name="address_law" Mode="In" Type="String" />
+            <Parameter Name="computer_count" Mode="In" Type="Int16" />
+            <Parameter Name="manager_count" Mode="In" Type="Int16" />
+            <Parameter Name="INN" Mode="In" Type="String" />
+            <Parameter Name="KPP" Mode="In" Type="String" />
+            <Parameter Name="VAT" Mode="In" Type="Boolean" />
+            <Parameter Name="VAT_argument" Mode="In" Type="String" />
+            <Parameter Name="recvisits" Mode="In" Type="String" />
+            <Parameter Name="description" Mode="In" Type="String" />
+            <Parameter Name="fin_head" Mode="In" Type="String" />
+            <Parameter Name="fin_position" Mode="In" Type="String" />
+            <Parameter Name="work_on" Mode="In" Type="String" />
+            <Parameter Name="ind_licence" Mode="In" Type="String" />
+            <Parameter Name="ind_tax" Mode="In" Type="String" />
+            <Parameter Name="ind_inn" Mode="In" Type="String" />
+            <Parameter Name="ind_register" Mode="In" Type="String" />
+            <Parameter Name="desc_control" Mode="In" Type="String" />
+            <Parameter Name="login" Mode="In" Type="String" />
+            <Parameter Name="password" Mode="In" Type="String" />
+            <Parameter Name="folder" Mode="In" Type="String" />
+            <Parameter Name="dictaphone" Mode="In" Type="Int32" />
+            <Parameter Name="notebook" Mode="In" Type="Int32" />
+            <Parameter Name="computer" Mode="In" Type="Int32" />
+            <Parameter Name="pda" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="supervisor_agreement_add">
+            <Parameter Name="manager_id" Mode="In" Type="Int32" />
+            <Parameter Name="workplace_type_id" Mode="In" Type="Byte" />
+            <Parameter Name="supervisor_id" Mode="In" Type="Int32" />
+            <Parameter Name="super_agree_type_id" Mode="In" Type="Byte" />
+          </FunctionImport>
+          <FunctionImport Name="supervisor_agreement_del">
+            <Parameter Name="manager_id" Mode="In" Type="Int32" />
+            <Parameter Name="workplace_type_id" Mode="In" Type="Byte" />
+            <Parameter Name="super_agree_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="supervisor_delete">
+            <Parameter Name="manager_id" Mode="In" Type="Int32" />
+            <Parameter Name="workplace_type_id" Mode="In" Type="Byte" />
+            <Parameter Name="supervisor_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="supervisor_event_add">
+            <Parameter Name="manager_id" Mode="In" Type="Int32" />
+            <Parameter Name="workplace_type_id" Mode="In" Type="Byte" />
+            <Parameter Name="supervisor_id" Mode="In" Type="Int32" />
+            <Parameter Name="event_date" Mode="In" Type="DateTime" />
+            <Parameter Name="text" Mode="In" Type="String" />
+            <Parameter Name="description" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="supervisor_event_delete">
+            <Parameter Name="manager_id" Mode="In" Type="Int32" />
+            <Parameter Name="workplace_type_id" Mode="In" Type="Byte" />
+            <Parameter Name="supervisor_event_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="supervisor_event_update">
+            <Parameter Name="manager_id" Mode="In" Type="Int32" />
+            <Parameter Name="workplace_type_id" Mode="In" Type="Byte" />
+            <Parameter Name="supervisor_event_id" Mode="In" Type="Int32" />
+            <Parameter Name="event_date" Mode="In" Type="DateTime" />
+            <Parameter Name="text" Mode="In" Type="String" />
+            <Parameter Name="description" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="supervisor_place_add">
+            <Parameter Name="manager_id" Mode="In" Type="Int32" />
+            <Parameter Name="workplace_type_id" Mode="In" Type="Byte" />
+            <Parameter Name="supervisor_id" Mode="In" Type="Int32" />
+            <Parameter Name="terr_list_id" Mode="In" Type="Int32" />
+            <Parameter Name="super_territory_type_id" Mode="In" Type="Byte" />
+          </FunctionImport>
+          <FunctionImport Name="supervisor_place_delete">
+            <Parameter Name="manager_id" Mode="In" Type="Int32" />
+            <Parameter Name="workplace_type_id" Mode="In" Type="Byte" />
+            <Parameter Name="super_place_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="supervisor_place_update">
+            <Parameter Name="manager_id" Mode="In" Type="Int32" />
+            <Parameter Name="workplace_type_id" Mode="In" Type="Byte" />
+            <Parameter Name="super_place_id" Mode="In" Type="Int32" />
+            <Parameter Name="supervisor_id" Mode="In" Type="Int32" />
+            <Parameter Name="terr_list_id" Mode="In" Type="Int32" />
+            <Parameter Name="super_territory_type_id" Mode="In" Type="Byte" />
+          </FunctionImport>
+          <FunctionImport Name="supervisor_setstate">
+            <Parameter Name="manager_id" Mode="In" Type="Int32" />
+            <Parameter Name="workplace_type_id" Mode="In" Type="Byte" />
+            <Parameter Name="supervisor_id" Mode="In" Type="Int16" />
+            <Parameter Name="catalogue_state_id" Mode="In" Type="Byte" />
+          </FunctionImport>
+          <FunctionImport Name="supervisor_update">
+            <Parameter Name="manager_id" Mode="In" Type="Int32" />
+            <Parameter Name="workplace_type_id" Mode="In" Type="Byte" />
+            <Parameter Name="supervisor_id" Mode="In" Type="Int32" />
+            <Parameter Name="name_fact" Mode="In" Type="String" />
+            <Parameter Name="state_id" Mode="In" Type="Byte" />
+            <Parameter Name="name_law" Mode="In" Type="String" />
+            <Parameter Name="head_name" Mode="In" Type="String" />
+            <Parameter Name="head_comment" Mode="In" Type="String" />
+            <Parameter Name="head_phone_work" Mode="In" Type="String" />
+            <Parameter Name="head_phone_home" Mode="In" Type="String" />
+            <Parameter Name="head_phone_mobile" Mode="In" Type="String" />
+            <Parameter Name="fax" Mode="In" Type="String" />
+            <Parameter Name="http" Mode="In" Type="String" />
+            <Parameter Name="head_email" Mode="In" Type="String" />
+            <Parameter Name="field_name" Mode="In" Type="String" />
+            <Parameter Name="field_comment" Mode="In" Type="String" />
+            <Parameter Name="field_phone_work" Mode="In" Type="String" />
+            <Parameter Name="field_phone_home" Mode="In" Type="String" />
+            <Parameter Name="field_phone_mobile" Mode="In" Type="String" />
+            <Parameter Name="field_email" Mode="In" Type="String" />
+            <Parameter Name="inter_count" Mode="In" Type="Int16" />
+            <Parameter Name="address_fact" Mode="In" Type="String" />
+            <Parameter Name="address_law" Mode="In" Type="String" />
+            <Parameter Name="computer_count" Mode="In" Type="Int16" />
+            <Parameter Name="manager_count" Mode="In" Type="Int16" />
+            <Parameter Name="INN" Mode="In" Type="String" />
+            <Parameter Name="KPP" Mode="In" Type="String" />
+            <Parameter Name="VAT" Mode="In" Type="Boolean" />
+            <Parameter Name="VAT_argument" Mode="In" Type="String" />
+            <Parameter Name="recvisits" Mode="In" Type="String" />
+            <Parameter Name="description" Mode="In" Type="String" />
+            <Parameter Name="fin_head" Mode="In" Type="String" />
+            <Parameter Name="fin_position" Mode="In" Type="String" />
+            <Parameter Name="work_on" Mode="In" Type="String" />
+            <Parameter Name="ind_licence" Mode="In" Type="String" />
+            <Parameter Name="ind_tax" Mode="In" Type="String" />
+            <Parameter Name="ind_inn" Mode="In" Type="String" />
+            <Parameter Name="ind_register" Mode="In" Type="String" />
+            <Parameter Name="desc_control" Mode="In" Type="String" />
+            <Parameter Name="login" Mode="In" Type="String" />
+            <Parameter Name="password" Mode="In" Type="String" />
+            <Parameter Name="folder" Mode="In" Type="String" />
+            <Parameter Name="dictaphone" Mode="In" Type="Int32" />
+            <Parameter Name="notebook" Mode="In" Type="Int32" />
+            <Parameter Name="computer" Mode="In" Type="Int32" />
+            <Parameter Name="pda" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="supervisor_work_add">
+            <Parameter Name="manager_id" Mode="In" Type="Int32" />
+            <Parameter Name="workplace_type_id" Mode="In" Type="Byte" />
+            <Parameter Name="supervisor_id" Mode="In" Type="Int32" />
+            <Parameter Name="super_work_type_id" Mode="In" Type="Byte" />
+          </FunctionImport>
+          <FunctionImport Name="supervisor_work_del">
+            <Parameter Name="manager_id" Mode="In" Type="Int32" />
+            <Parameter Name="workplace_type_id" Mode="In" Type="Byte" />
+            <Parameter Name="super_work_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="supervisor_work_update">
+            <Parameter Name="manager_id" Mode="In" Type="Int32" />
+            <Parameter Name="workplace_type_id" Mode="In" Type="Byte" />
+            <Parameter Name="super_work_id" Mode="In" Type="Int32" />
+            <Parameter Name="supervisor_id" Mode="In" Type="Int32" />
+            <Parameter Name="super_work_type_id" Mode="In" Type="Byte" />
+          </FunctionImport>
+          <EntitySet Name="place_list" EntityType="RealRepository.place_list" />
+          <FunctionImport Name="router_super_list" ReturnType="Collection(RealRepository.router_super_list_Result)">
+            <Parameter Name="place_type" Mode="In" Type="Byte" />
+            <Parameter Name="place_id" Mode="In" Type="Int32" />
+            <Parameter Name="state_id" Mode="In" Type="Byte" />
+            <Parameter Name="work_type_id" Mode="In" Type="Byte" />
+          </FunctionImport>
+          <FunctionImport Name="router_manager_add">
+            <Parameter Name="supervisor_id" Mode="In" Type="Int32" />
+            <Parameter Name="name" Mode="In" Type="String" />
+            <Parameter Name="phone" Mode="In" Type="String" />
+            <Parameter Name="email" Mode="In" Type="String" />
+            <Parameter Name="desc" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="router_manager_delete">
+          <Parameter Name="super_manager_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="router_manager_update">
+            <Parameter Name="super_manager_id" Mode="In" Type="Int32" />
+            <Parameter Name="supervisor_id" Mode="In" Type="Int32" />
+            <Parameter Name="name" Mode="In" Type="String" />
+            <Parameter Name="phone" Mode="In" Type="String" />
+            <Parameter Name="email" Mode="In" Type="String" />
+            <Parameter Name="desc" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="router_supervisor_delete">
+          <Parameter Name="supervisor_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="router_supervisor_place_delete">
+          <Parameter Name="super_place_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="router_supervisor_add" ReturnType="Collection(Int32)">
+            <Parameter Name="name_fact" Mode="In" Type="String" />
+            <Parameter Name="state_id" Mode="In" Type="Byte" />
+            <Parameter Name="name_law" Mode="In" Type="String" />
+            <Parameter Name="head_name" Mode="In" Type="String" />
+            <Parameter Name="head_comment" Mode="In" Type="String" />
+            <Parameter Name="head_phone_work" Mode="In" Type="String" />
+            <Parameter Name="head_phone_home" Mode="In" Type="String" />
+            <Parameter Name="head_phone_mobile" Mode="In" Type="String" />
+            <Parameter Name="fax" Mode="In" Type="String" />
+            <Parameter Name="http" Mode="In" Type="String" />
+            <Parameter Name="head_email" Mode="In" Type="String" />
+            <Parameter Name="field_name" Mode="In" Type="String" />
+            <Parameter Name="field_comment" Mode="In" Type="String" />
+            <Parameter Name="field_phone_work" Mode="In" Type="String" />
+            <Parameter Name="field_phone_home" Mode="In" Type="String" />
+            <Parameter Name="field_phone_mobile" Mode="In" Type="String" />
+            <Parameter Name="field_email" Mode="In" Type="String" />
+            <Parameter Name="inter_count" Mode="In" Type="Int16" />
+            <Parameter Name="address_fact" Mode="In" Type="String" />
+            <Parameter Name="address_law" Mode="In" Type="String" />
+            <Parameter Name="computer_count" Mode="In" Type="Int16" />
+            <Parameter Name="manager_count" Mode="In" Type="Int16" />
+            <Parameter Name="INN" Mode="In" Type="String" />
+            <Parameter Name="KPP" Mode="In" Type="String" />
+            <Parameter Name="VAT" Mode="In" Type="Boolean" />
+            <Parameter Name="VAT_argument" Mode="In" Type="String" />
+            <Parameter Name="recvisits" Mode="In" Type="String" />
+            <Parameter Name="description" Mode="In" Type="String" />
+            <Parameter Name="fin_head" Mode="In" Type="String" />
+            <Parameter Name="fin_position" Mode="In" Type="String" />
+            <Parameter Name="work_on" Mode="In" Type="String" />
+            <Parameter Name="ind_licence" Mode="In" Type="String" />
+            <Parameter Name="ind_tax" Mode="In" Type="String" />
+            <Parameter Name="ind_inn" Mode="In" Type="String" />
+            <Parameter Name="ind_register" Mode="In" Type="String" />
+            <Parameter Name="desc_control" Mode="In" Type="String" />
+            <Parameter Name="login" Mode="In" Type="String" />
+            <Parameter Name="password" Mode="In" Type="String" />
+            <Parameter Name="folder" Mode="In" Type="String" />
+            <Parameter Name="dictaphone" Mode="In" Type="Int32" />
+            <Parameter Name="notebook" Mode="In" Type="Int32" />
+            <Parameter Name="computer" Mode="In" Type="Int32" />
+            <Parameter Name="pda" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="router_supervisor_place_add">
+            <Parameter Name="supervisor_id" Mode="In" Type="Int32" />
+            <Parameter Name="territory_id" Mode="In" Type="Int32" />
+            <Parameter Name="super_territory_type_id" Mode="In" Type="Byte" />
+            <Parameter Name="super_place_type_id" Mode="In" Type="Byte" />
+          </FunctionImport>
+          <FunctionImport Name="router_supervisor_work_add">
+            <Parameter Name="supervisor_id" Mode="In" Type="Int32" />
+            <Parameter Name="super_work_type_id" Mode="In" Type="Byte" />
+          </FunctionImport>
+          <FunctionImport Name="router_supervisor_work_del">
+          <Parameter Name="super_work_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="router_supervisor_place_update">
+            <Parameter Name="super_place_id" Mode="In" Type="Int32" />
+            <Parameter Name="supervisor_id" Mode="In" Type="Int32" />
+            <Parameter Name="territory_id" Mode="In" Type="Int32" />
+            <Parameter Name="super_place_type_id" Mode="In" Type="Int32" />
+            <Parameter Name="super_territory_type_id" Mode="In" Type="Byte" />
+          </FunctionImport>
+          <FunctionImport Name="router_supervisor_update">
+            <Parameter Name="supervisor_id" Mode="In" Type="Int32" />
+            <Parameter Name="name_fact" Mode="In" Type="String" />
+            <Parameter Name="state_id" Mode="In" Type="Byte" />
+            <Parameter Name="name_law" Mode="In" Type="String" />
+            <Parameter Name="head_name" Mode="In" Type="String" />
+            <Parameter Name="head_comment" Mode="In" Type="String" />
+            <Parameter Name="head_phone_work" Mode="In" Type="String" />
+            <Parameter Name="head_phone_home" Mode="In" Type="String" />
+            <Parameter Name="head_phone_mobile" Mode="In" Type="String" />
+            <Parameter Name="fax" Mode="In" Type="String" />
+            <Parameter Name="http" Mode="In" Type="String" />
+            <Parameter Name="head_email" Mode="In" Type="String" />
+            <Parameter Name="field_name" Mode="In" Type="String" />
+            <Parameter Name="field_comment" Mode="In" Type="String" />
+            <Parameter Name="field_phone_work" Mode="In" Type="String" />
+            <Parameter Name="field_phone_home" Mode="In" Type="String" />
+            <Parameter Name="field_phone_mobile" Mode="In" Type="String" />
+            <Parameter Name="field_email" Mode="In" Type="String" />
+            <Parameter Name="inter_count" Mode="In" Type="Int16" />
+            <Parameter Name="address_fact" Mode="In" Type="String" />
+            <Parameter Name="address_law" Mode="In" Type="String" />
+            <Parameter Name="computer_count" Mode="In" Type="Int16" />
+            <Parameter Name="manager_count" Mode="In" Type="Int16" />
+            <Parameter Name="INN" Mode="In" Type="String" />
+            <Parameter Name="KPP" Mode="In" Type="String" />
+            <Parameter Name="VAT" Mode="In" Type="Boolean" />
+            <Parameter Name="VAT_argument" Mode="In" Type="String" />
+            <Parameter Name="recvisits" Mode="In" Type="String" />
+            <Parameter Name="description" Mode="In" Type="String" />
+            <Parameter Name="fin_head" Mode="In" Type="String" />
+            <Parameter Name="fin_position" Mode="In" Type="String" />
+            <Parameter Name="work_on" Mode="In" Type="String" />
+            <Parameter Name="ind_licence" Mode="In" Type="String" />
+            <Parameter Name="ind_tax" Mode="In" Type="String" />
+            <Parameter Name="ind_inn" Mode="In" Type="String" />
+            <Parameter Name="ind_register" Mode="In" Type="String" />
+            <Parameter Name="desc_control" Mode="In" Type="String" />
+            <Parameter Name="login" Mode="In" Type="String" />
+            <Parameter Name="password" Mode="In" Type="String" />
+            <Parameter Name="folder" Mode="In" Type="String" />
+            <Parameter Name="dictaphone" Mode="In" Type="Int32" />
+            <Parameter Name="notebook" Mode="In" Type="Int32" />
+            <Parameter Name="computer" Mode="In" Type="Int32" />
+            <Parameter Name="pda" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="super_agree_types" EntityType="RealRepository.super_agree_types" />
+          <EntitySet Name="super_agreements" EntityType="RealRepository.super_agreements" />
+          <AssociationSet Name="FK_super_agreements_super_agree_types" Association="RealRepository.FK_super_agreements_super_agree_types">
+            <End Role="super_agree_types" EntitySet="super_agree_types" />
+            <End Role="super_agreements" EntitySet="super_agreements" />
+          </AssociationSet>
+          <AssociationSet Name="FK_super_agreements_supervisors" Association="RealRepository.FK_super_agreements_supervisors">
+            <End Role="supervisors" EntitySet="supervisors" />
+            <End Role="super_agreements" EntitySet="super_agreements" />
+          </AssociationSet>
+          <FunctionImport Name="router_supervisor_agreement_add">
+            <Parameter Name="supervisor_id" Mode="In" Type="Int32" />
+            <Parameter Name="super_agree_type_id" Mode="In" Type="Byte" />
+          </FunctionImport>
+          <FunctionImport Name="router_supervisor_agreement_del">
+            <Parameter Name="super_agree_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="super_list_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="String" Name="name" Nullable="true" MaxLength="303" />
+        </ComplexType>
+        <ComplexType Name="super_territories_show_Result">
+          <Property Type="Int32" Name="supervisor_id" Nullable="false" />
+          <Property Type="String" Name="super_place_name" Nullable="true" MaxLength="203" />
+          <Property Type="String" Name="super_terr_list_id" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="super_territory_type" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="name_fact" Nullable="false" MaxLength="150" />
+          <Property Type="String" Name="head_name" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="head_phone_work" Nullable="true" MaxLength="80" />
+          <Property Type="String" Name="head_email" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="computer" Nullable="true" />
+          <Property Type="String" Name="state" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="login" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="password" Nullable="true" MaxLength="10" />
+          <Property Type="Boolean" Name="edit" Nullable="true" />
+          <Property Type="Boolean" Name="del" Nullable="true" />
+          <Property Type="Boolean" Name="canstate" Nullable="true" />
+        </ComplexType>
+        <EntityType Name="place_list">
+          <Key>
+            <PropertyRef Name="place_type" />
+          </Key>
+          <Property Name="place_type" Type="Int32" Nullable="false" />
+          <Property Name="place_id" Type="Int32" />
+          <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="region_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <ComplexType Name="super_list1_Result">
+          <Property Type="Int32" Name="supervisor_id" Nullable="false" />
+          <Property Type="Byte" Name="place_type" Nullable="false" />
+          <Property Type="String" Name="place" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="region" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="super_state" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="territory_type" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="name_fact" Nullable="false" MaxLength="150" />
+          <Property Type="String" Name="head_name" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="head_phone_work" Nullable="true" MaxLength="80" />
+          <Property Type="String" Name="head_email" Nullable="true" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="router_super_list_Result">
+          <Property Type="Int32" Name="supervisor_id" Nullable="false" />
+          <Property Type="Byte" Name="place_type" Nullable="false" />
+          <Property Type="String" Name="place" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="region" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="super_state" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="territory_type" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="name_fact" Nullable="false" MaxLength="150" />
+          <Property Type="String" Name="head_name" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="head_phone_work" Nullable="true" MaxLength="80" />
+          <Property Type="String" Name="head_email" Nullable="true" MaxLength="100" />
+        </ComplexType>
+        <EntityType Name="super_agree_types">
+          <Key>
+            <PropertyRef Name="super_agree_type_id" />
+          </Key>
+          <Property Name="super_agree_type_id" Type="Byte" Nullable="false" />
+          <Property Name="agree_name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="super_agreements" Relationship="RealRepository.FK_super_agreements_super_agree_types" FromRole="super_agree_types" ToRole="super_agreements" />
+        </EntityType>
+        <EntityType Name="super_agreements">
+          <Key>
+            <PropertyRef Name="super_agree_id" />
+          </Key>
+          <Property Name="super_agree_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="supervisor_id" Type="Int32" Nullable="false" />
+          <Property Name="super_agree_type_id" Type="Byte" Nullable="false" />
+          <NavigationProperty Name="super_agree_types" Relationship="RealRepository.FK_super_agreements_super_agree_types" FromRole="super_agreements" ToRole="super_agree_types" />
+          <NavigationProperty Name="supervisors" Relationship="RealRepository.FK_super_agreements_supervisors" FromRole="super_agreements" ToRole="supervisors" />
+        </EntityType>
+        <Association Name="FK_super_agreements_super_agree_types">
+          <End Type="RealRepository.super_agree_types" Role="super_agree_types" Multiplicity="1" />
+          <End Type="RealRepository.super_agreements" Role="super_agreements" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="super_agree_types">
+              <PropertyRef Name="super_agree_type_id" />
+            </Principal>
+            <Dependent Role="super_agreements">
+              <PropertyRef Name="super_agree_type_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_super_agreements_supervisors">
+          <End Type="RealRepository.supervisors" Role="supervisors" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="RealRepository.super_agreements" Role="super_agreements" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="supervisors">
+              <PropertyRef Name="supervisor_id" />
+            </Principal>
+            <Dependent Role="super_agreements">
+              <PropertyRef Name="supervisor_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище RealRepositoryContainer" CdmEntityContainer="MICRouterEntities">
+          <EntitySetMapping Name="super_managers">
+            <EntityTypeMapping TypeName="RealRepository.super_managers">
+              <MappingFragment StoreEntitySet="super_managers">
+                <ScalarProperty Name="super_manager_id" ColumnName="super_manager_id" />
+                <ScalarProperty Name="supervisor_id" ColumnName="supervisor_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="desc" ColumnName="desc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="super_place_types">
+            <EntityTypeMapping TypeName="RealRepository.super_place_types">
+              <MappingFragment StoreEntitySet="super_place_types">
+                <ScalarProperty Name="super_place_type_id" ColumnName="super_place_type_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="super_places">
+            <EntityTypeMapping TypeName="RealRepository.super_places">
+              <MappingFragment StoreEntitySet="super_places">
+                <ScalarProperty Name="super_place_id" ColumnName="super_place_id" />
+                <ScalarProperty Name="supervisor_id" ColumnName="supervisor_id" />
+                <ScalarProperty Name="territory_id" ColumnName="territory_id" />
+                <ScalarProperty Name="super_territory_type_id" ColumnName="super_territory_type_id" />
+                <ScalarProperty Name="super_place_type_id" ColumnName="super_place_type_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="super_properties">
+            <EntityTypeMapping TypeName="RealRepository.super_properties">
+              <MappingFragment StoreEntitySet="super_properties">
+                <ScalarProperty Name="super_property_id" ColumnName="super_property_id" />
+                <ScalarProperty Name="supervisor_id" ColumnName="supervisor_id" />
+                <ScalarProperty Name="super_state_id" ColumnName="super_state_id" />
+                <ScalarProperty Name="manager_id" ColumnName="manager_id" />
+                <ScalarProperty Name="change_date" ColumnName="change_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="super_states">
+            <EntityTypeMapping TypeName="RealRepository.super_states">
+              <MappingFragment StoreEntitySet="super_states">
+                <ScalarProperty Name="super_state_id" ColumnName="super_state_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="super_territory_types">
+            <EntityTypeMapping TypeName="RealRepository.super_territory_types">
+              <MappingFragment StoreEntitySet="super_territory_types">
+                <ScalarProperty Name="super_territory_type_id" ColumnName="super_territory_type_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="super_work_types">
+            <EntityTypeMapping TypeName="RealRepository.super_work_types">
+              <MappingFragment StoreEntitySet="super_work_types">
+                <ScalarProperty Name="super_work_type_id" ColumnName="super_work_type_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="ord" ColumnName="ord" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="super_works">
+            <EntityTypeMapping TypeName="RealRepository.super_works">
+              <MappingFragment StoreEntitySet="super_works">
+                <ScalarProperty Name="super_work_id" ColumnName="super_work_id" />
+                <ScalarProperty Name="supervisor_id" ColumnName="supervisor_id" />
+                <ScalarProperty Name="super_work_type_id" ColumnName="super_work_type_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="supervisors">
+            <EntityTypeMapping TypeName="RealRepository.supervisors">
+              <MappingFragment StoreEntitySet="supervisors">
+                <ScalarProperty Name="supervisor_id" ColumnName="supervisor_id" />
+                <ScalarProperty Name="name_fact" ColumnName="name_fact" />
+                <ScalarProperty Name="name_law" ColumnName="name_law" />
+                <ScalarProperty Name="head_name" ColumnName="head_name" />
+                <ScalarProperty Name="head_comment" ColumnName="head_comment" />
+                <ScalarProperty Name="head_phone_work" ColumnName="head_phone_work" />
+                <ScalarProperty Name="head_phone_home" ColumnName="head_phone_home" />
+                <ScalarProperty Name="head_phone_mobile" ColumnName="head_phone_mobile" />
+                <ScalarProperty Name="fax" ColumnName="fax" />
+                <ScalarProperty Name="http" ColumnName="http" />
+                <ScalarProperty Name="head_email" ColumnName="head_email" />
+                <ScalarProperty Name="field_name" ColumnName="field_name" />
+                <ScalarProperty Name="field_comment" ColumnName="field_comment" />
+                <ScalarProperty Name="field_phone_work" ColumnName="field_phone_work" />
+                <ScalarProperty Name="field_phone_home" ColumnName="field_phone_home" />
+                <ScalarProperty Name="field_phone_mobile" ColumnName="field_phone_mobile" />
+                <ScalarProperty Name="field_email" ColumnName="field_email" />
+                <ScalarProperty Name="inter_count" ColumnName="inter_count" />
+                <ScalarProperty Name="address_fact" ColumnName="address_fact" />
+                <ScalarProperty Name="address_law" ColumnName="address_law" />
+                <ScalarProperty Name="computer_count" ColumnName="computer_count" />
+                <ScalarProperty Name="manager_count" ColumnName="manager_count" />
+                <ScalarProperty Name="INN" ColumnName="INN" />
+                <ScalarProperty Name="KPP" ColumnName="KPP" />
+                <ScalarProperty Name="VAT" ColumnName="VAT" />
+                <ScalarProperty Name="VAT_argument" ColumnName="VAT_argument" />
+                <ScalarProperty Name="recvisits" ColumnName="recvisits" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="fin_head" ColumnName="fin_head" />
+                <ScalarProperty Name="fin_position" ColumnName="fin_position" />
+                <ScalarProperty Name="work_on" ColumnName="work_on" />
+                <ScalarProperty Name="ind_licence" ColumnName="ind_licence" />
+                <ScalarProperty Name="ind_tax" ColumnName="ind_tax" />
+                <ScalarProperty Name="ind_inn" ColumnName="ind_inn" />
+                <ScalarProperty Name="ind_register" ColumnName="ind_register" />
+                <ScalarProperty Name="desc_control" ColumnName="desc_control" />
+                <ScalarProperty Name="login" ColumnName="login" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="folder" ColumnName="folder" />
+                <ScalarProperty Name="dictaphone" ColumnName="dictaphone" />
+                <ScalarProperty Name="notebook" ColumnName="notebook" />
+                <ScalarProperty Name="computer" ColumnName="computer" />
+                <ScalarProperty Name="pda" ColumnName="pda" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="super_manager_v">
+            <EntityTypeMapping TypeName="RealRepository.super_manager_v">
+              <MappingFragment StoreEntitySet="super_manager_v">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="supervisor_id" ColumnName="supervisor_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="desc" ColumnName="desc" />
+                <ScalarProperty Name="canstate" ColumnName="canstate" />
+                <ScalarProperty Name="edit" ColumnName="edit" />
+                <ScalarProperty Name="del" ColumnName="del" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="super_state_list_v">
+            <EntityTypeMapping TypeName="RealRepository.super_state_list_v">
+              <MappingFragment StoreEntitySet="super_state_list_v">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="super_territories_show_v">
+            <EntityTypeMapping TypeName="RealRepository.super_territories_show_v">
+              <MappingFragment StoreEntitySet="super_territories_show_v">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="super_place_name" ColumnName="super_place_name" />
+                <ScalarProperty Name="supervisor_id" ColumnName="supervisor_id" />
+                <ScalarProperty Name="super_territory_type" ColumnName="super_territory_type" />
+                <ScalarProperty Name="name_fact" ColumnName="name_fact" />
+                <ScalarProperty Name="head_name" ColumnName="head_name" />
+                <ScalarProperty Name="head_phone_work" ColumnName="head_phone_work" />
+                <ScalarProperty Name="head_email" ColumnName="head_email" />
+                <ScalarProperty Name="login" ColumnName="login" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="edit" ColumnName="edit" />
+                <ScalarProperty Name="del" ColumnName="del" />
+                <ScalarProperty Name="canstate" ColumnName="canstate" />
+                <ScalarProperty Name="super_territory_type_id" ColumnName="super_territory_type_id" />
+                <ScalarProperty Name="terr_list_id" ColumnName="terr_list_id" />
+                <ScalarProperty Name="state_id" ColumnName="state_id" />
+                <ScalarProperty Name="super_work_type_id" ColumnName="super_work_type_id" />
+                <ScalarProperty Name="computer" ColumnName="computer" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="super_territories_v">
+            <EntityTypeMapping TypeName="RealRepository.super_territories_v">
+              <MappingFragment StoreEntitySet="super_territories_v">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="terr_list_id" ColumnName="terr_list_id" />
+                <ScalarProperty Name="supervisor_id" ColumnName="supervisor_id" />
+                <ScalarProperty Name="super_territory_type_id" ColumnName="super_territory_type_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="super_territory_list_v">
+            <EntityTypeMapping TypeName="RealRepository.super_territory_list_v">
+              <MappingFragment StoreEntitySet="super_territory_list_v">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="super_v">
+            <EntityTypeMapping TypeName="RealRepository.super_v">
+              <MappingFragment StoreEntitySet="super_v">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name_fact" ColumnName="name_fact" />
+                <ScalarProperty Name="name_law" ColumnName="name_law" />
+                <ScalarProperty Name="head_name" ColumnName="head_name" />
+                <ScalarProperty Name="head_comment" ColumnName="head_comment" />
+                <ScalarProperty Name="head_phone_work" ColumnName="head_phone_work" />
+                <ScalarProperty Name="head_phone_home" ColumnName="head_phone_home" />
+                <ScalarProperty Name="head_phone_mobile" ColumnName="head_phone_mobile" />
+                <ScalarProperty Name="fax" ColumnName="fax" />
+                <ScalarProperty Name="http" ColumnName="http" />
+                <ScalarProperty Name="head_email" ColumnName="head_email" />
+                <ScalarProperty Name="field_name" ColumnName="field_name" />
+                <ScalarProperty Name="field_comment" ColumnName="field_comment" />
+                <ScalarProperty Name="field_phone_work" ColumnName="field_phone_work" />
+                <ScalarProperty Name="field_phone_home" ColumnName="field_phone_home" />
+                <ScalarProperty Name="field_phone_mobile" ColumnName="field_phone_mobile" />
+                <ScalarProperty Name="field_email" ColumnName="field_email" />
+                <ScalarProperty Name="inter_count" ColumnName="inter_count" />
+                <ScalarProperty Name="address_fact" ColumnName="address_fact" />
+                <ScalarProperty Name="address_law" ColumnName="address_law" />
+                <ScalarProperty Name="computer_count" ColumnName="computer_count" />
+                <ScalarProperty Name="manager_count" ColumnName="manager_count" />
+                <ScalarProperty Name="INN" ColumnName="INN" />
+                <ScalarProperty Name="KPP" ColumnName="KPP" />
+                <ScalarProperty Name="VAT" ColumnName="VAT" />
+                <ScalarProperty Name="VAT_argument" ColumnName="VAT_argument" />
+                <ScalarProperty Name="recvisits" ColumnName="recvisits" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="fin_head" ColumnName="fin_head" />
+                <ScalarProperty Name="fin_position" ColumnName="fin_position" />
+                <ScalarProperty Name="work_on" ColumnName="work_on" />
+                <ScalarProperty Name="ind_licence" ColumnName="ind_licence" />
+                <ScalarProperty Name="ind_tax" ColumnName="ind_tax" />
+                <ScalarProperty Name="ind_inn" ColumnName="ind_inn" />
+                <ScalarProperty Name="ind_register" ColumnName="ind_register" />
+                <ScalarProperty Name="desc_control" ColumnName="desc_control" />
+                <ScalarProperty Name="login" ColumnName="login" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="folder" ColumnName="folder" />
+                <ScalarProperty Name="dictaphone" ColumnName="dictaphone" />
+                <ScalarProperty Name="notebook" ColumnName="notebook" />
+                <ScalarProperty Name="computer" ColumnName="computer" />
+                <ScalarProperty Name="pda" ColumnName="pda" />
+                <ScalarProperty Name="state_id" ColumnName="state_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="super_work_type_list_v">
+            <EntityTypeMapping TypeName="RealRepository.super_work_type_list_v">
+              <MappingFragment StoreEntitySet="super_work_type_list_v">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="ord" ColumnName="ord" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionName="Хранилище RealRepository.super_current_states" FunctionImportName="super_current_states">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="RealRepository.super_current_states_Result">
+                <ScalarProperty Name="super_id" ColumnName="super_id" />
+                <ScalarProperty Name="state_id" ColumnName="state_id" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="super_manager_delete" FunctionName="Хранилище RealRepository.super_manager_delete" />
+          <FunctionImportMapping FunctionImportName="super_manager_update" FunctionName="Хранилище RealRepository.super_manager_update" />
+          <FunctionImportMapping FunctionImportName="super_territories_show" FunctionName="Хранилище RealRepository.super_territories_show">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="RealRepository.super_territories_show_Result">
+                <ScalarProperty Name="supervisor_id" ColumnName="supervisor_id" />
+                <ScalarProperty Name="super_place_name" ColumnName="super_place_name" />
+                <ScalarProperty Name="super_terr_list_id" ColumnName="super_terr_list_id" />
+                <ScalarProperty Name="super_territory_type" ColumnName="super_territory_type" />
+                <ScalarProperty Name="name_fact" ColumnName="name_fact" />
+                <ScalarProperty Name="head_name" ColumnName="head_name" />
+                <ScalarProperty Name="head_phone_work" ColumnName="head_phone_work" />
+                <ScalarProperty Name="head_email" ColumnName="head_email" />
+                <ScalarProperty Name="computer" ColumnName="computer" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="login" ColumnName="login" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="edit" ColumnName="edit" />
+                <ScalarProperty Name="del" ColumnName="del" />
+                <ScalarProperty Name="canstate" ColumnName="canstate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="supervisor_add" FunctionName="Хранилище RealRepository.supervisor_add" />
+          <FunctionImportMapping FunctionImportName="supervisor_agreement_add" FunctionName="Хранилище RealRepository.supervisor_agreement_add" />
+          <FunctionImportMapping FunctionImportName="supervisor_agreement_del" FunctionName="Хранилище RealRepository.supervisor_agreement_del" />
+          <FunctionImportMapping FunctionImportName="supervisor_delete" FunctionName="Хранилище RealRepository.supervisor_delete" />
+          <FunctionImportMapping FunctionImportName="supervisor_event_add" FunctionName="Хранилище RealRepository.supervisor_event_add" />
+          <FunctionImportMapping FunctionImportName="supervisor_event_delete" FunctionName="Хранилище RealRepository.supervisor_event_delete" />
+          <FunctionImportMapping FunctionImportName="supervisor_event_update" FunctionName="Хранилище RealRepository.supervisor_event_update" />
+          <FunctionImportMapping FunctionImportName="supervisor_place_add" FunctionName="Хранилище RealRepository.supervisor_place_add" />
+          <FunctionImportMapping FunctionImportName="supervisor_place_delete" FunctionName="Хранилище RealRepository.supervisor_place_delete" />
+          <FunctionImportMapping FunctionImportName="supervisor_place_update" FunctionName="Хранилище RealRepository.supervisor_place_update" />
+          <FunctionImportMapping FunctionImportName="supervisor_setstate" FunctionName="Хранилище RealRepository.supervisor_setstate" />
+          <FunctionImportMapping FunctionImportName="supervisor_update" FunctionName="Хранилище RealRepository.supervisor_update" />
+          <FunctionImportMapping FunctionImportName="supervisor_work_add" FunctionName="Хранилище RealRepository.supervisor_work_add" />
+          <FunctionImportMapping FunctionImportName="supervisor_work_del" FunctionName="Хранилище RealRepository.supervisor_work_del" />
+          <FunctionImportMapping FunctionImportName="supervisor_work_update" FunctionName="Хранилище RealRepository.supervisor_work_update" />
+          <EntitySetMapping Name="place_list">
+            <EntityTypeMapping TypeName="RealRepository.place_list">
+              <MappingFragment StoreEntitySet="place_list">
+                <ScalarProperty Name="region_name" ColumnName="region_name" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="place_id" ColumnName="place_id" />
+                <ScalarProperty Name="place_type" ColumnName="place_type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="router_super_list" FunctionName="Хранилище RealRepository.router_super_list">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="RealRepository.router_super_list_Result">
+                <ScalarProperty Name="supervisor_id" ColumnName="supervisor_id" />
+                <ScalarProperty Name="place_type" ColumnName="place_type" />
+                <ScalarProperty Name="place" ColumnName="place" />
+                <ScalarProperty Name="region" ColumnName="region" />
+                <ScalarProperty Name="super_state" ColumnName="super_state" />
+                <ScalarProperty Name="territory_type" ColumnName="territory_type" />
+                <ScalarProperty Name="name_fact" ColumnName="name_fact" />
+                <ScalarProperty Name="head_name" ColumnName="head_name" />
+                <ScalarProperty Name="head_phone_work" ColumnName="head_phone_work" />
+                <ScalarProperty Name="head_email" ColumnName="head_email" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="router_manager_add" FunctionName="Хранилище RealRepository.router_manager_add" />
+          <FunctionImportMapping FunctionImportName="router_manager_delete" FunctionName="Хранилище RealRepository.router_manager_delete" />
+          <FunctionImportMapping FunctionImportName="router_manager_update" FunctionName="Хранилище RealRepository.router_manager_update" />
+          <FunctionImportMapping FunctionImportName="router_supervisor_delete" FunctionName="Хранилище RealRepository.router_supervisor_delete" />
+          <FunctionImportMapping FunctionImportName="router_supervisor_place_delete" FunctionName="Хранилище RealRepository.router_supervisor_place_delete" />
+          <FunctionImportMapping FunctionImportName="router_supervisor_add" FunctionName="Хранилище RealRepository.router_supervisor_add" />
+          <FunctionImportMapping FunctionImportName="router_supervisor_place_add" FunctionName="Хранилище RealRepository.router_supervisor_place_add" />
+          <FunctionImportMapping FunctionImportName="router_supervisor_work_add" FunctionName="Хранилище RealRepository.router_supervisor_work_add" />
+          <FunctionImportMapping FunctionImportName="router_supervisor_work_del" FunctionName="Хранилище RealRepository.router_supervisor_work_del" />
+          <FunctionImportMapping FunctionImportName="router_supervisor_place_update" FunctionName="Хранилище RealRepository.router_supervisor_place_update" />
+          <FunctionImportMapping FunctionImportName="router_supervisor_update" FunctionName="Хранилище RealRepository.router_supervisor_update" />
+          <EntitySetMapping Name="super_agree_types">
+            <EntityTypeMapping TypeName="RealRepository.super_agree_types">
+              <MappingFragment StoreEntitySet="super_agree_types">
+                <ScalarProperty Name="agree_name" ColumnName="agree_name" />
+                <ScalarProperty Name="super_agree_type_id" ColumnName="super_agree_type_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="super_agreements">
+            <EntityTypeMapping TypeName="RealRepository.super_agreements">
+              <MappingFragment StoreEntitySet="super_agreements">
+                <ScalarProperty Name="super_agree_type_id" ColumnName="super_agree_type_id" />
+                <ScalarProperty Name="supervisor_id" ColumnName="supervisor_id" />
+                <ScalarProperty Name="super_agree_id" ColumnName="super_agree_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="router_supervisor_agreement_add" FunctionName="Хранилище RealRepository.router_supervisor_agreement_add" />
+          <FunctionImportMapping FunctionImportName="router_supervisor_agreement_del" FunctionName="Хранилище RealRepository.router_supervisor_agreement_del" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

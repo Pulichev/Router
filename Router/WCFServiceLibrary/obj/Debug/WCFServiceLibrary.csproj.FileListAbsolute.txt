@@ -1,0 +1,17 @@
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\WCFServiceLibrary\bin\Debug\WCFServiceLibrary.dll.config
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\WCFServiceLibrary\bin\Debug\WCFServiceLibrary.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\WCFServiceLibrary\bin\Debug\WCFServiceLibrary.pdb
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\WCFServiceLibrary\bin\Debug\Data.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\WCFServiceLibrary\bin\Debug\DBProvider.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\WCFServiceLibrary\bin\Debug\EntityFramework.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\WCFServiceLibrary\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\WCFServiceLibrary\bin\Debug\RealRepository.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\WCFServiceLibrary\bin\Debug\Data.pdb
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\WCFServiceLibrary\bin\Debug\DBProvider.pdb
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\WCFServiceLibrary\bin\Debug\EntityFramework.xml
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\WCFServiceLibrary\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\WCFServiceLibrary\bin\Debug\RealRepository.pdb
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\WCFServiceLibrary\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\WCFServiceLibrary\obj\Debug\WCFServiceLibrary.csprojResolveAssemblyReference.cache
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\WCFServiceLibrary\obj\Debug\WCFServiceLibrary.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\WCFServiceLibrary\obj\Debug\WCFServiceLibrary.pdb

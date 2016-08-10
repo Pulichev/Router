@@ -1,0 +1,170 @@
+<publishData>
+  <publishTarget publishUrl="http://localhost/Router">
+    <file relUrl="Web.config" publishTime="12/01/2015 17:36:20" />
+    <file relUrl="RouterWCF.svc" publishTime="11/27/2015 17:13:05" />
+    <file relUrl="bin/EntityFramework.dll" publishTime="10/21/2015 18:09:25" />
+    <file relUrl="bin/DBProvider.pdb" publishTime="12/01/2015 17:38:52" />
+    <file relUrl="bin/Router.WCF.pdb" publishTime="12/01/2015 17:49:47" />
+    <file relUrl="bin/WCFServiceLibrary.pdb" publishTime="11/18/2015 17:36:39" />
+    <file relUrl="bin/DBProvider.dll" publishTime="12/01/2015 17:38:52" />
+    <file relUrl="bin\ru/EntityFramework.resources.dll" publishTime="10/21/2015 18:09:25" />
+    <file relUrl="bin/EntityFramework.xml" publishTime="10/21/2015 18:09:25" />
+    <file relUrl="bin/WCFServiceLibrary.dll" publishTime="11/18/2015 17:36:39" />
+    <file relUrl="bin/EntityFramework.SqlServer.dll" publishTime="10/21/2015 18:09:25" />
+    <file relUrl="bin/Router.WCF.vshost.exe.config" publishTime="11/27/2015 17:32:41" />
+    <file relUrl="bin/Router.WCF.vshost.exe" publishTime="11/27/2015 18:33:38" />
+    <file relUrl="bin/Router.WCF.vshost.exe.manifest" publishTime="03/18/2013 17:00:38" />
+    <file relUrl="bin/EntityFramework.SqlServer.xml" publishTime="10/21/2015 18:09:25" />
+    <file relUrl="bin/Data.pdb" publishTime="12/01/2015 17:38:52" />
+    <file relUrl="bin/Data.dll" publishTime="12/01/2015 17:38:52" />
+    <file relUrl="bin/Router.WCF.dll.config" publishTime="12/01/2015 17:36:20" />
+    <file relUrl="bin/Router.WCF.dll" publishTime="12/01/2015 17:49:47" />
+    <file relUrl="bin/WCFServiceLibrary.dll.config" publishTime="11/18/2015 17:36:39" />
+  </publishTarget>
+  <publishTarget publishUrl="http://localhost:8239/">
+    <file relUrl="Web.config" publishTime="11/27/2015 17:13:58" />
+    <file relUrl="RouterWCF.svc" publishTime="11/27/2015 17:13:05" />
+    <file relUrl="bin/EntityFramework.dll" publishTime="10/21/2015 18:09:25" />
+    <file relUrl="bin/DBProvider.pdb" publishTime="11/27/2015 18:26:18" />
+    <file relUrl="bin/Router.WCF.pdb" publishTime="11/27/2015 18:26:19" />
+    <file relUrl="bin/WCFServiceLibrary.pdb" publishTime="11/18/2015 17:36:39" />
+    <file relUrl="bin/DBProvider.dll" publishTime="11/27/2015 18:26:18" />
+    <file relUrl="bin\ru/EntityFramework.resources.dll" publishTime="10/21/2015 18:09:25" />
+    <file relUrl="bin/EntityFramework.xml" publishTime="10/21/2015 18:09:25" />
+    <file relUrl="bin/WCFServiceLibrary.dll" publishTime="11/18/2015 17:36:39" />
+    <file relUrl="Web.Router.WCF.RouterWCF.svc" publishTime="11/27/2015 18:26:30" />
+    <file relUrl="bin/Router.WCF.dll.config" publishTime="11/27/2015 17:32:41" />
+    <file relUrl="bin/EntityFramework.SqlServer.dll" publishTime="10/21/2015 18:09:25" />
+    <file relUrl="Properties/AssemblyInfo.cs" publishTime="11/17/2015 12:20:43" />
+    <file relUrl="IRouterWCF.cs" publishTime="11/27/2015 13:49:49" />
+    <file relUrl="RouterWCF.cs" publishTime="11/27/2015 13:50:25" />
+    <file relUrl="Router.WCF.csproj.user" publishTime="11/27/2015 17:34:49" />
+    <file relUrl="bin/Router.WCF.dll" publishTime="11/27/2015 18:26:19" />
+    <file relUrl="App.config" publishTime="11/27/2015 17:32:41" />
+    <file relUrl="bin/Data.pdb" publishTime="11/27/2015 16:42:32" />
+    <file relUrl="bin/EntityFramework.SqlServer.xml" publishTime="10/21/2015 18:09:25" />
+    <file relUrl="bin/Data.dll" publishTime="11/27/2015 16:42:32" />
+    <file relUrl="Router.WCF.csproj" publishTime="11/27/2015 14:03:25" />
+    <file relUrl="bin/WCFServiceLibrary.dll.config" publishTime="11/18/2015 17:36:39" />
+  </publishTarget>
+  <publishTarget publishUrl="http://localhost:8238/">
+    <file relUrl="Web.config" publishTime="11/27/2015 16:58:02" />
+    <file relUrl="RouterWCF.svc" publishTime="11/27/2015 17:12:41" />
+    <file relUrl="bin/EntityFramework.dll" publishTime="10/21/2015 18:09:25" />
+    <file relUrl="bin/Router.WCF.pdb" publishTime="11/27/2015 17:12:46" />
+    <file relUrl="bin/WCFServiceLibrary.pdb" publishTime="11/18/2015 17:36:39" />
+    <file relUrl="bin/DBProvider.dll" publishTime="11/27/2015 16:42:33" />
+    <file relUrl="bin\ru/EntityFramework.resources.dll" publishTime="10/21/2015 18:09:25" />
+    <file relUrl="bin/EntityFramework.xml" publishTime="10/21/2015 18:09:25" />
+    <file relUrl="bin/WCFServiceLibrary.dll" publishTime="11/18/2015 17:36:39" />
+    <file relUrl="Web.Router.WCF.RouterWCF.svc" publishTime="11/27/2015 17:12:48" />
+    <file relUrl="bin/EntityFramework.SqlServer.dll" publishTime="10/21/2015 18:09:25" />
+    <file relUrl="bin/DBProvider.pdb" publishTime="11/27/2015 16:42:33" />
+    <file relUrl="bin/Data.pdb" publishTime="11/27/2015 16:42:32" />
+    <file relUrl="bin/Data.dll" publishTime="11/27/2015 16:42:32" />
+    <file relUrl="bin/Router.WCF.dll.config" publishTime="11/27/2015 16:58:02" />
+    <file relUrl="bin/Router.WCF.dll" publishTime="11/27/2015 17:12:47" />
+    <file relUrl="bin/WCFServiceLibrary.dll.config" publishTime="11/18/2015 17:36:39" />
+    <file relUrl="bin/EntityFramework.SqlServer.xml" publishTime="10/21/2015 18:09:25" />
+  </publishTarget>
+  <publishTarget publishUrl="http://localhost:8237/">
+    <file relUrl="Web.config" publishTime="11/27/2015 12:35:14" />
+    <file relUrl="RouterWCF.svc" publishTime="11/25/2015 17:26:13" />
+    <file relUrl="bin/EntityFramework.dll" publishTime="10/21/2015 18:09:25" />
+    <file relUrl="bin/DBProvider.pdb" publishTime="11/27/2015 12:35:17" />
+    <file relUrl="bin/Router.WCF.pdb" publishTime="11/27/2015 12:35:18" />
+    <file relUrl="bin/WCFServiceLibrary.pdb" publishTime="11/24/2015 16:14:10" />
+    <file relUrl="bin/e1ac2527-2493-4d70-bdf5-b046ec52162fSdrConfigExample.svclog" publishTime="11/24/2015 15:21:35" />
+    <file relUrl="bin/DBProvider.dll" publishTime="11/27/2015 12:35:17" />
+    <file relUrl="bin\ru/EntityFramework.resources.dll" publishTime="10/21/2015 18:09:25" />
+    <file relUrl="bin/EntityFramework.xml" publishTime="10/21/2015 18:09:25" />
+    <file relUrl="bin/SdrConfigExample.svclog" publishTime="11/25/2015 17:32:20" />
+    <file relUrl="Web.Router.WCF.RouterWCF.svc" publishTime="11/27/2015 12:35:24" />
+    <file relUrl="bin/EntityFramework.SqlServer.dll" publishTime="10/21/2015 18:09:25" />
+    <file relUrl="bin/WCFServiceLibrary.dll" publishTime="11/24/2015 16:14:10" />
+    <file relUrl="bin/293c28a3-4efc-4b08-a5d6-c837d90646ffSdrConfigExample.svclog" publishTime="11/25/2015 10:30:26" />
+    <file relUrl="bin/Data.pdb" publishTime="11/27/2015 12:35:16" />
+    <file relUrl="bin/Data.dll" publishTime="11/27/2015 12:35:16" />
+    <file relUrl="bin/Router.WCF.dll.config" publishTime="11/27/2015 12:35:14" />
+    <file relUrl="bin/3e3f9ab1-d2eb-4034-9171-b8d40fed2028SdrConfigExample.svclog" publishTime="11/25/2015 10:24:34" />
+    <file relUrl="bin/Router.WCF.dll" publishTime="11/27/2015 12:35:18" />
+    <file relUrl="bin/WCFServiceLibrary.dll.config" publishTime="11/24/2015 16:14:10" />
+    <file relUrl="bin/EntityFramework.SqlServer.xml" publishTime="10/21/2015 18:09:25" />
+  </publishTarget>
+  <publishTarget publishUrl="http://localhost:8236/">
+    <file relUrl="Web.config" publishTime="11/27/2015 11:38:29" />
+    <file relUrl="RouterWCF.svc" publishTime="11/25/2015 17:26:13" />
+    <file relUrl="bin/EntityFramework.dll" publishTime="10/21/2015 18:09:25" />
+    <file relUrl="bin/Router.WCF.pdb" publishTime="11/27/2015 12:10:33" />
+    <file relUrl="bin/WCFServiceLibrary.pdb" publishTime="11/24/2015 16:14:10" />
+    <file relUrl="bin/e1ac2527-2493-4d70-bdf5-b046ec52162fSdrConfigExample.svclog" publishTime="11/24/2015 15:21:35" />
+    <file relUrl="bin/DBProvider.dll" publishTime="11/27/2015 12:10:33" />
+    <file relUrl="bin\ru/EntityFramework.resources.dll" publishTime="10/21/2015 18:09:25" />
+    <file relUrl="bin/EntityFramework.xml" publishTime="10/21/2015 18:09:25" />
+    <file relUrl="bin/WCFServiceLibrary.dll" publishTime="11/24/2015 16:14:10" />
+    <file relUrl="Web.Router.WCF.RouterWCF.svc" publishTime="11/27/2015 12:10:40" />
+    <file relUrl="bin/Router.WCF.dll.config" publishTime="11/27/2015 11:38:29" />
+    <file relUrl="bin/EntityFramework.SqlServer.dll" publishTime="10/21/2015 18:09:25" />
+    <file relUrl="bin/DBProvider.pdb" publishTime="11/27/2015 12:10:33" />
+    <file relUrl="bin/293c28a3-4efc-4b08-a5d6-c837d90646ffSdrConfigExample.svclog" publishTime="11/25/2015 10:30:26" />
+    <file relUrl="bin/Data.pdb" publishTime="11/27/2015 12:10:32" />
+    <file relUrl="bin/Data.dll" publishTime="11/27/2015 12:10:32" />
+    <file relUrl="bin/SdrConfigExample.svclog" publishTime="11/25/2015 17:32:20" />
+    <file relUrl="bin/3e3f9ab1-d2eb-4034-9171-b8d40fed2028SdrConfigExample.svclog" publishTime="11/25/2015 10:24:34" />
+    <file relUrl="bin/Router.WCF.dll" publishTime="11/27/2015 12:10:33" />
+    <file relUrl="bin/WCFServiceLibrary.dll.config" publishTime="11/24/2015 16:14:10" />
+    <file relUrl="bin/EntityFramework.SqlServer.xml" publishTime="10/21/2015 18:09:25" />
+  </publishTarget>
+  <publishTarget publishUrl="http://localhost:8235/">
+    <file relUrl="Web.config" publishTime="11/25/2015 17:33:35" />
+    <file relUrl="RouterWCF.svc" publishTime="11/25/2015 17:26:13" />
+    <file relUrl="bin/EntityFramework.dll" publishTime="10/21/2015 18:09:25" />
+    <file relUrl="bin/Router.WCF.pdb" publishTime="11/25/2015 17:51:54" />
+    <file relUrl="bin/WCFServiceLibrary.pdb" publishTime="11/24/2015 16:14:10" />
+    <file relUrl="bin/e1ac2527-2493-4d70-bdf5-b046ec52162fSdrConfigExample.svclog" publishTime="11/24/2015 15:21:35" />
+    <file relUrl="bin/RealRepository.dll" publishTime="11/10/2015 14:37:37" />
+    <file relUrl="bin/DBProvider.dll" publishTime="11/25/2015 17:51:54" />
+    <file relUrl="bin\ru/EntityFramework.resources.dll" publishTime="10/21/2015 18:09:25" />
+    <file relUrl="bin/EntityFramework.xml" publishTime="10/21/2015 18:09:25" />
+    <file relUrl="bin/WCFServiceLibrary.dll" publishTime="11/24/2015 16:14:10" />
+    <file relUrl="Web.Router.WCF.RouterWCF.svc" publishTime="11/25/2015 17:52:10" />
+    <file relUrl="bin/SdrConfigExample.svclog" publishTime="11/25/2015 17:32:20" />
+    <file relUrl="bin/EntityFramework.SqlServer.dll" publishTime="10/21/2015 18:09:25" />
+    <file relUrl="bin/Router.WCF.dll" publishTime="11/25/2015 17:51:55" />
+    <file relUrl="bin/DBProvider.pdb" publishTime="11/25/2015 17:51:54" />
+    <file relUrl="bin/293c28a3-4efc-4b08-a5d6-c837d90646ffSdrConfigExample.svclog" publishTime="11/25/2015 10:30:26" />
+    <file relUrl="bin/Data.pdb" publishTime="11/25/2015 17:51:53" />
+    <file relUrl="bin/Data.dll" publishTime="11/25/2015 17:51:53" />
+    <file relUrl="bin/Router.WCF.dll.config" publishTime="11/25/2015 17:33:35" />
+    <file relUrl="bin/3e3f9ab1-d2eb-4034-9171-b8d40fed2028SdrConfigExample.svclog" publishTime="11/25/2015 10:24:34" />
+    <file relUrl="bin/RealRepository.pdb" publishTime="11/10/2015 14:37:37" />
+    <file relUrl="bin/WCFServiceLibrary.dll.config" publishTime="11/24/2015 16:14:10" />
+    <file relUrl="bin/EntityFramework.SqlServer.xml" publishTime="10/21/2015 18:09:25" />
+  </publishTarget>
+  <publishTarget publishUrl="http://localhost:8232/">
+    <file relUrl="Web.config" publishTime="11/25/2015 17:33:35" />
+    <file relUrl="RouterWCF.svc" publishTime="11/25/2015 17:26:13" />
+    <file relUrl="bin/EntityFramework.dll" publishTime="10/21/2015 18:09:25" />
+    <file relUrl="bin/Router.WCF.pdb" publishTime="11/25/2015 17:49:45" />
+    <file relUrl="bin/WCFServiceLibrary.pdb" publishTime="11/24/2015 16:14:10" />
+    <file relUrl="bin/e1ac2527-2493-4d70-bdf5-b046ec52162fSdrConfigExample.svclog" publishTime="11/24/2015 15:21:35" />
+    <file relUrl="bin/RealRepository.dll" publishTime="11/10/2015 14:37:37" />
+    <file relUrl="bin/DBProvider.dll" publishTime="11/25/2015 17:49:45" />
+    <file relUrl="bin\ru/EntityFramework.resources.dll" publishTime="10/21/2015 18:09:25" />
+    <file relUrl="bin/EntityFramework.xml" publishTime="10/21/2015 18:09:25" />
+    <file relUrl="bin/WCFServiceLibrary.dll" publishTime="11/24/2015 16:14:10" />
+    <file relUrl="Web.Router.WCF.RouterWCF.svc" publishTime="11/25/2015 17:49:52" />
+    <file relUrl="bin/SdrConfigExample.svclog" publishTime="11/25/2015 17:32:20" />
+    <file relUrl="bin/EntityFramework.SqlServer.dll" publishTime="10/21/2015 18:09:25" />
+    <file relUrl="bin/Router.WCF.dll" publishTime="11/25/2015 17:49:45" />
+    <file relUrl="bin/DBProvider.pdb" publishTime="11/25/2015 17:49:45" />
+    <file relUrl="bin/293c28a3-4efc-4b08-a5d6-c837d90646ffSdrConfigExample.svclog" publishTime="11/25/2015 10:30:26" />
+    <file relUrl="bin/Data.pdb" publishTime="11/25/2015 17:49:44" />
+    <file relUrl="bin/Data.dll" publishTime="11/25/2015 17:49:44" />
+    <file relUrl="bin/Router.WCF.dll.config" publishTime="11/25/2015 17:33:35" />
+    <file relUrl="bin/3e3f9ab1-d2eb-4034-9171-b8d40fed2028SdrConfigExample.svclog" publishTime="11/25/2015 10:24:34" />
+    <file relUrl="bin/RealRepository.pdb" publishTime="11/10/2015 14:37:37" />
+    <file relUrl="bin/WCFServiceLibrary.dll.config" publishTime="11/24/2015 16:14:10" />
+    <file relUrl="bin/EntityFramework.SqlServer.xml" publishTime="10/21/2015 18:09:25" />
+  </publishTarget>
+</publishData>

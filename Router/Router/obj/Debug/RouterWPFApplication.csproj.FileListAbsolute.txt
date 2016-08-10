@@ -1,0 +1,13 @@
+c:\users\vladislav.pulichev\documents\visual studio 2013\Projects\RouterWPFApplication\RouterWPFApplication\bin\Debug\RouterWPFApplication.exe.config
+c:\users\vladislav.pulichev\documents\visual studio 2013\Projects\RouterWPFApplication\RouterWPFApplication\bin\Debug\RouterWPFApplication.exe
+c:\users\vladislav.pulichev\documents\visual studio 2013\Projects\RouterWPFApplication\RouterWPFApplication\bin\Debug\RouterWPFApplication.pdb
+c:\users\vladislav.pulichev\documents\visual studio 2013\Projects\RouterWPFApplication\RouterWPFApplication\obj\Debug\RouterWPFApplication.csprojResolveAssemblyReference.cache
+c:\users\vladislav.pulichev\documents\visual studio 2013\Projects\RouterWPFApplication\RouterWPFApplication\obj\Debug\MainWindow.baml
+c:\users\vladislav.pulichev\documents\visual studio 2013\Projects\RouterWPFApplication\RouterWPFApplication\obj\Debug\MainWindow.g.cs
+c:\users\vladislav.pulichev\documents\visual studio 2013\Projects\RouterWPFApplication\RouterWPFApplication\obj\Debug\App.g.cs
+c:\users\vladislav.pulichev\documents\visual studio 2013\Projects\RouterWPFApplication\RouterWPFApplication\obj\Debug\RouterWPFApplication_MarkupCompile.cache
+c:\users\vladislav.pulichev\documents\visual studio 2013\Projects\RouterWPFApplication\RouterWPFApplication\obj\Debug\RouterWPFApplication.g.resources
+c:\users\vladislav.pulichev\documents\visual studio 2013\Projects\RouterWPFApplication\RouterWPFApplication\obj\Debug\RouterWPFApplication.Properties.Resources.resources
+c:\users\vladislav.pulichev\documents\visual studio 2013\Projects\RouterWPFApplication\RouterWPFApplication\obj\Debug\RouterWPFApplication.csproj.GenerateResource.Cache
+c:\users\vladislav.pulichev\documents\visual studio 2013\Projects\RouterWPFApplication\RouterWPFApplication\obj\Debug\RouterWPFApplication.exe
+c:\users\vladislav.pulichev\documents\visual studio 2013\Projects\RouterWPFApplication\RouterWPFApplication\obj\Debug\RouterWPFApplication.pdb

@@ -1,0 +1,6 @@
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\Data\bin\Release\Data.dll.config
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\Data\bin\Release\Data.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\Data\bin\Release\Data.pdb
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\Data\obj\Release\Data.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\Data\obj\Release\Data.pdb
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\Data\obj\Release\Data.csprojResolveAssemblyReference.cache

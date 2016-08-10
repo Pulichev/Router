@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="localhost" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Vladislav\.Pulichev\\Documents\\Visual\ Studio\ 2013\\Projects\\Router\\RouterWCFForIIS\\obj\\Debug\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\Vladislav\.Pulichev\\Documents\\Visual\ Studio\ 2013\\Projects\\Router\\RouterWCFForIIS\\obj\\Debug\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="DBProvider.DB-Web.config Connection String" description="" value="Data Source=E_PROTEUS;Initial Catalog=MICRouter;Integrated Security=True" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Vladislav\.Pulichev\\Documents\\Visual\ Studio\ 2013\\Projects\\Router\\RouterWCFForIIS\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DBProvider.DB']/@connectionString" />
+  </parameter>
+  <parameter name="DBProvider.MICRouterEntities-Web.config Connection String" description="" value="Data Source=E_PROTEUS;Initial Catalog=MICRouter;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Vladislav\.Pulichev\\Documents\\Visual\ Studio\ 2013\\Projects\\Router\\RouterWCFForIIS\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DBProvider.MICRouterEntities']/@connectionString" />
+  </parameter>
+</parameters>

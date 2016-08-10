@@ -1,0 +1,29 @@
+﻿<Window x:Class="Router.View.DeleteConfirmView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Вы уверены?" Height="201.667" Width="336" IsManipulationEnabled="True"
+		Icon="../Icons/Attention.png" ResizeMode="NoResize"
+		WindowStartupLocation="CenterScreen">
+	<Grid Margin="0,0,0,0">
+
+		<Grid.RowDefinitions>
+			<RowDefinition Height="95"></RowDefinition>
+			<RowDefinition Height="45*"></RowDefinition>
+		</Grid.RowDefinitions>
+
+		<Label Grid.Row="0" Content="Вы уверены, что хотите удалить?" Margin="69,40,56,29"/>
+		<Button Click="ButtonOk_Click" Grid.Row="1" IsEnabled="{Binding Entity.ButtonOkIsEnabled}" Style="{DynamicResource SquareButtonStyle}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="91" Height="30" Margin="56,24,0,0" BorderBrush="#FF595858">
+			<StackPanel Orientation="Horizontal">
+				<Image Source="/Router;component/Icons/Ok.png" Height="20" Width="32"/>
+				<TextBlock Text=" Ок" FontSize="12" FontWeight="Normal"/>
+			</StackPanel>
+		</Button>
+		<Button Click="ButtonCancel_Click" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{DynamicResource SquareButtonStyle}" Width="102" Margin="180,24,0,0" Height="30" BorderBrush="#FF595858">
+			<StackPanel Orientation="Horizontal">
+				<Image Source="/Router;component/Icons/Cancel.png" Height="15" Width="24"/>
+				<TextBlock Text=" Отмена" FontSize="12" FontWeight="Normal"/>
+			</StackPanel>
+		</Button>
+
+	</Grid>
+</Window>

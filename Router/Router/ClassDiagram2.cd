@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Router.App" Collapsed="true">
+    <Position X="14" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Router.Dialogs.DialogFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Dialogs\DialogFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Router.Dialogs.DialogManager" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Dialogs\DialogManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Router.Model.ManagerModel" Collapsed="true">
+    <Position X="18.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AwACAAAAAEAAAQAACBgEQAAEABAAAAGAAIAAAQAAAAA=</HashCode>
+      <FileName>Model\ManagerModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Router.Model.PropertyChangeEventBase" Collapsed="true">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\PropertyChangeEventBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Router.Model.SuperDetailsAgreeModel" Collapsed="true">
+    <Position X="7.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAICAABAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\SuperDetailsAgreeModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Router.Model.SuperDetailsCheckedModel&lt;TValue&gt;" Collapsed="true">
+    <Position X="10.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAIQAAACAAAgABAAQABAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Model\SuperDetailsCheckedModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Router.Model.SuperDetailsModel" Collapsed="true">
+    <Position X="11.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>JdBCRpBA9EShISHoTYhBwIhA3BmYEJlCkwEUKAAEBxA=</HashCode>
+      <FileName>Model\SuperDetailsModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Router.Model.SuperDetailsPlaceModel" Collapsed="true">
+    <Position X="11.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\SuperDetailsPlaceModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Router.Model.SuperDetailsPlaceLeaveModel" Collapsed="true">
+    <Position X="12.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\SuperDetailsPlaceModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Router.Model.SuperDetailsPlaceBrigadeModel" Collapsed="true">
+    <Position X="10.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\SuperDetailsPlaceModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Router.Model.SuperDetailsWorksModel" Collapsed="true">
+    <Position X="9.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAICAAAAAAAAAAAAAAAABAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\SuperDetailsWorksModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Router.Model.SuperModel" Collapsed="true">
+    <Position X="14" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAEIAAAAIAAACAADAAAAAAgAAAJAAABAA=</HashCode>
+      <FileName>Model\SuperModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Router.Properties.Resources" Collapsed="true">
+    <Position X="19.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Router.Properties.Settings" Collapsed="true">
+    <Position X="14" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Router.Security.UserGroupRights" Collapsed="true">
+    <Position X="17.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAQAAEAAAAAABABACAAAAAAgIAAgAA=</HashCode>
+      <FileName>Security\UserGroupRights.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Router.View.DeleteConfirmView" Collapsed="true">
+    <Position X="15.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\DeleteConfirmView.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Router.View.MainWindow" Collapsed="true">
+    <Position X="15.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Router.View.ManagerView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAABGAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\ManagerView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Router.View.SuperView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAABGAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\SuperView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Router.ViewModel.ExportToExcel" Collapsed="true">
+    <Position X="14" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAIDAABAABAAAAAA=</HashCode>
+      <FileName>ViewModel\ExportToExcel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Router.ViewModel.MainWindowViewModel" Collapsed="true">
+    <Position X="8.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BBQkQERgCh7NQApOAGIIAADwFTGUAiECMJHEEASIgDE=</HashCode>
+      <FileName>ViewModel\MainWindowViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Router.ViewModel.ManagerDetailsViewModel" Collapsed="true">
+    <Position X="16.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\ManagerDetailsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Router.ViewModel.SuperDetailsViewModel" Collapsed="true">
+    <Position X="20.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\SuperDetailsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Data.Agreement" Collapsed="true">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Data.Manager" Collapsed="true">
+    <Position X="2.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Data.Place" Collapsed="true">
+    <Position X="4" Y="3.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Data.State" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Data.Super" Collapsed="true">
+    <Position X="2.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Data.SuperDetails" Collapsed="true">
+    <Position X="4" Y="4.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Data.Works" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Data.WorkType" Collapsed="true">
+    <Position X="2.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Interface Name="Core.IDialogManager" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Core.IEntityDialog" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Core.IEntityDialog&lt;TEntity&gt;" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Core.IEntityDialogFactory" Collapsed="true">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Core.IRepository" Collapsed="true">
+    <Position X="3" Y="1.25" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

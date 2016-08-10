@@ -1,0 +1,15 @@
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\RouterWCFForIIS\bin\RouterWCFForIIS.dll.config
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\RouterWCFForIIS\bin\RouterWCFForIIS.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\RouterWCFForIIS\bin\RouterWCFForIIS.pdb
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\RouterWCFForIIS\bin\Data.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\RouterWCFForIIS\bin\DBProvider.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\RouterWCFForIIS\bin\EntityFramework.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\RouterWCFForIIS\bin\EntityFramework.SqlServer.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\RouterWCFForIIS\bin\Data.pdb
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\RouterWCFForIIS\bin\DBProvider.pdb
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\RouterWCFForIIS\bin\EntityFramework.xml
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\RouterWCFForIIS\bin\EntityFramework.SqlServer.xml
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\RouterWCFForIIS\bin\ru\EntityFramework.resources.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\RouterWCFForIIS\obj\Release\RouterWCFForIIS.csprojResolveAssemblyReference.cache
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\RouterWCFForIIS\obj\Release\RouterWCFForIIS.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\RouterWCFForIIS\obj\Release\RouterWCFForIIS.pdb

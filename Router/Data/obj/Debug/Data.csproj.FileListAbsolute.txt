@@ -1,0 +1,12 @@
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\Data\bin\Debug\Data.dll.config
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\Data\bin\Debug\Data.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\Data\bin\Debug\Data.pdb
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\Data\obj\Debug\Data.dll
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\Data\obj\Debug\Data.pdb
+C:\Users\Vladislav.Pulichev\Documents\Visual Studio 2013\Projects\Router\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
+C:\Users\Влад\Desktop\Router\Data\bin\Debug\Data.dll.config
+C:\Users\Влад\Desktop\Router\Data\bin\Debug\Data.dll
+C:\Users\Влад\Desktop\Router\Data\bin\Debug\Data.pdb
+C:\Users\Влад\Desktop\Router\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
+C:\Users\Влад\Desktop\Router\Data\obj\Debug\Data.dll
+C:\Users\Влад\Desktop\Router\Data\obj\Debug\Data.pdb

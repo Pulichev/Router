@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Data" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="SuperDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AddressFact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AddressLaw" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Agreements" nillable="true" type="tns:ArrayOfAgreement" />
+      <xs:element minOccurs="0" name="Brigades" nillable="true" type="tns:ArrayOfPlace" />
+      <xs:element minOccurs="0" name="Computer" type="xs:int" />
+      <xs:element minOccurs="0" name="ComputerCount" type="xs:int" />
+      <xs:element minOccurs="0" name="DescControl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dictaphone" type="xs:int" />
+      <xs:element minOccurs="0" name="Fax" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FieldComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FieldEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FieldName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FieldPhoneHome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FieldPhoneMobile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FieldPhoneWork" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FinHead" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FinPosition" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Folder" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HeadComment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HeadEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HeadName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HeadPhoneHome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HeadPhoneMobile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HeadPhoneWork" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Http" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="INN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IndInn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IndLicense" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IndRegister" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IndTax" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InterCount" type="xs:int" />
+      <xs:element minOccurs="0" name="KPP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Leave" nillable="true" type="tns:ArrayOfPlace" />
+      <xs:element minOccurs="0" name="Login" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ManagerCount" type="xs:int" />
+      <xs:element minOccurs="0" name="NameFact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NameLaw" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Notebook" type="xs:int" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pda" type="xs:int" />
+      <xs:element minOccurs="0" name="PlaceId" nillable="true" type="tns:Place" />
+      <xs:element minOccurs="0" name="Recvisits" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StateId" type="xs:int" />
+      <xs:element minOccurs="0" name="VAT" type="xs:boolean" />
+      <xs:element minOccurs="0" name="VAT_Argument" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WorkOn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Works" nillable="true" type="tns:ArrayOfWorks" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SuperDetails" nillable="true" type="tns:SuperDetails" />
+  <xs:complexType name="ArrayOfAgreement">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Agreement" nillable="true" type="tns:Agreement" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAgreement" nillable="true" type="tns:ArrayOfAgreement" />
+  <xs:complexType name="Agreement">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgreeId" type="xs:int" />
+      <xs:element minOccurs="0" name="AgreeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AgreeTypeId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Agreement" nillable="true" type="tns:Agreement" />
+  <xs:complexType name="ArrayOfPlace">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Place" nillable="true" type="tns:Place" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlace" nillable="true" type="tns:ArrayOfPlace" />
+  <xs:complexType name="Place">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Region" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SuperPlacesId" type="xs:int" />
+      <xs:element minOccurs="0" name="Type" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Place" nillable="true" type="tns:Place" />
+  <xs:complexType name="ArrayOfWorks">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Works" nillable="true" type="tns:Works" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWorks" nillable="true" type="tns:ArrayOfWorks" />
+  <xs:complexType name="Works">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="WorkId" type="xs:int" />
+      <xs:element minOccurs="0" name="WorkTypeId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Works" nillable="true" type="tns:Works" />
+  <xs:complexType name="ArrayOfManager">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Manager" nillable="true" type="tns:Manager" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfManager" nillable="true" type="tns:ArrayOfManager" />
+  <xs:complexType name="Manager">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Commentary" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FIO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Mail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SuperId" type="xs:int" />
+      <xs:element minOccurs="0" name="Telephone" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Manager" nillable="true" type="tns:Manager" />
+  <xs:complexType name="ArrayOfWorkType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WorkType" nillable="true" type="tns:WorkType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWorkType" nillable="true" type="tns:ArrayOfWorkType" />
+  <xs:complexType name="WorkType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WorkType" nillable="true" type="tns:WorkType" />
+  <xs:complexType name="ArrayOfState">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="State" nillable="true" type="tns:State" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfState" nillable="true" type="tns:ArrayOfState" />
+  <xs:complexType name="State">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="State" nillable="true" type="tns:State" />
+  <xs:complexType name="ArrayOfSuper">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Super" nillable="true" type="tns:Super" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSuper" nillable="true" type="tns:ArrayOfSuper" />
+  <xs:complexType name="Super">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EMail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Head" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlaceId" type="xs:int" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TerritoryType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Super" nillable="true" type="tns:Super" />
+</xs:schema>
